@@ -1,0 +1,17 @@
+// Layout styles for Give Protocol Documentation
+//
+// All layout styles have been consolidated into main.scss for better organization
+// and to prevent CSS variable conflicts. This file is kept for future layout-specific
+// customizations that don't fit in the main design system.
+//
+// The following styles are now handled in main.scss:
+// - Site structure (.site, .site-main, .sidebar)
+// - Navigation (.site-nav)
+// - Main content (.main-content)
+// - Page headers (.page-header)
+// - Article content (.article-content)
+// - Footer (.site-footer)
+// - Breadcrumbs (.breadcrumbs)
+// - Responsive utilities
+//
+// This approach ensures consistent CSS variables and prevents duplicate styles.

@@ -1,0 +1,1662 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Security Headers -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="{{ site.security.content_security_policy | strip }}"
+    />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta
+      http-equiv="Referrer-Policy"
+      content="strict-origin-when-cross-origin"
+    />
+
+    <title>
+      {% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}
+    </title>
+    <meta
+      name="description"
+      content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"
+    />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-CBQHKLHD8T"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-CBQHKLHD8T");
+    </script>
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="{{ '/assets/images/logo.svg' | relative_url }}"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      /* Immediate styles to prevent layout shift */
+      body {
+        font-family: "Inter", sans-serif;
+        background: #f0eee7;
+        margin: 0;
+        transition:
+          background-color 0.3s ease,
+          color 0.3s ease;
+      }
+      body.dark-mode {
+        background: #0f172a;
+        color: #f1f5f9;
+      }
+      .docs-header {
+        background: #f0eee7;
+        border-bottom: 1px solid #e5e7eb;
+        padding: 1rem 0;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        transition:
+          background-color 0.3s ease,
+          border-color 0.3s ease;
+      }
+      body.dark-mode .docs-header {
+        background: #1e293b;
+        border-bottom-color: #334155;
+      }
+      .docs-container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .docs-brand {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: #111827;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      body.dark-mode .docs-brand {
+        color: #f1f5f9;
+      }
+      .docs-search {
+        flex: 1;
+        max-width: 400px;
+        margin: 0 2rem;
+        position: relative;
+      }
+      .docs-search input {
+        width: 100%;
+        padding: 0.5rem 1rem 0.5rem 2.5rem;
+        background: #f9fafb;
+        border: 1px solid #d1d5db;
+        border-radius: 0.5rem;
+        font-size: 0.875rem;
+        transition:
+          background-color 0.3s ease,
+          border-color 0.3s ease;
+      }
+      body.dark-mode .docs-search input {
+        background: #374151;
+        border-color: #4b5563;
+        color: #f1f5f9;
+      }
+      .docs-search input:focus {
+        outline: none;
+        background: #fff;
+        border-color: #6366f1;
+        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+      }
+      body.dark-mode .docs-search input:focus {
+        background: #4b5563;
+        border-color: #6366f1;
+      }
+      .docs-search-icon {
+        position: absolute;
+        left: 0.75rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #6b7280;
+        transition: color 0.3s ease;
+      }
+      body.dark-mode .docs-search-icon {
+        color: #d1d5db;
+      }
+      .docs-actions {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .docs-btn {
+        padding: 0.5rem 1rem;
+        background: transparent;
+        color: #4b5563;
+        text-decoration: none;
+        font-size: 0.875rem;
+        font-weight: 700;
+        border: 1px solid #d1d5db;
+        border-radius: 0.5rem;
+        transition: all 0.2s;
+      }
+      body.dark-mode .docs-btn {
+        color: #d1d5db;
+        border-color: #4b5563;
+      }
+      .docs-btn:hover {
+        background: #f3f4f6;
+        color: #111827;
+        border-color: #9ca3af;
+      }
+      body.dark-mode .docs-btn:hover {
+        background: #374151;
+        color: #f1f5f9;
+        border-color: #6b7280;
+      }
+      .docs-settings {
+        position: relative;
+      }
+      .docs-settings-btn {
+        width: 2.5rem;
+        height: 2.5rem;
+        background: transparent;
+        border: none;
+        border-radius: 0.5rem;
+        color: #6b7280;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+      }
+      body.dark-mode .docs-settings-btn {
+        color: #d1d5db;
+      }
+      .docs-settings-btn:hover {
+        background: #f3f4f6;
+        color: #111827;
+      }
+      body.dark-mode .docs-settings-btn:hover {
+        background: #374151;
+        color: #f1f5f9;
+      }
+      .docs-settings-menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        margin-top: 0.5rem;
+        background: #fff;
+        border-radius: 0.75rem;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e5e7eb;
+        min-width: 240px;
+        z-index: 100;
+        display: none;
+        transition:
+          background-color 0.3s ease,
+          border-color 0.3s ease;
+      }
+      body.dark-mode .docs-settings-menu {
+        background: #1e293b;
+        border-color: #334155;
+      }
+      .docs-settings-section {
+        padding: 1rem;
+        border-bottom: 1px solid #f3f4f6;
+      }
+      body.dark-mode .docs-settings-section {
+        border-bottom-color: #334155;
+      }
+      .docs-settings-section:last-child {
+        border-bottom: none;
+      }
+      .docs-settings-heading {
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #6b7280;
+        margin: 0 0 0.75rem 0;
+        letter-spacing: 0.05em;
+        transition: color 0.3s ease;
+      }
+      body.dark-mode .docs-settings-heading {
+        color: #d1d5db;
+      }
+      .docs-theme-options {
+        display: flex;
+        gap: 0.5rem;
+      }
+      .docs-theme-btn {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.375rem;
+        padding: 0.5rem;
+        background: #f9fafb;
+        border: 1px solid #e5e7eb;
+        border-radius: 0.375rem;
+        font-size: 0.875rem;
+        color: #374151;
+        cursor: pointer;
+        transition: all 0.15s;
+      }
+      body.dark-mode .docs-theme-btn {
+        background: #374151;
+        border-color: #4b5563;
+        color: #d1d5db;
+      }
+      .docs-theme-btn:hover {
+        background: #f3f4f6;
+        border-color: #d1d5db;
+      }
+      body.dark-mode .docs-theme-btn:hover {
+        background: #4b5563;
+        border-color: #6b7280;
+      }
+      .docs-theme-btn.active {
+        background: #eef2ff;
+        border-color: #6366f1;
+        color: #4f46e5;
+      }
+      body.dark-mode .docs-theme-btn.active {
+        background: #312e81;
+        border-color: #6366f1;
+        color: #c7d2fe;
+      }
+      .docs-lang-options {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+      .docs-lang-btn {
+        padding: 0.5rem 0.75rem;
+        background: transparent;
+        border: 1px solid #e5e7eb;
+        border-radius: 0.375rem;
+        font-size: 0.875rem;
+        color: #374151;
+        cursor: pointer;
+        transition: all 0.15s;
+        text-align: left;
+      }
+      body.dark-mode .docs-lang-btn {
+        border-color: #4b5563;
+        color: #d1d5db;
+      }
+      .docs-lang-btn:hover {
+        background: #f9fafb;
+        border-color: #d1d5db;
+      }
+      body.dark-mode .docs-lang-btn:hover {
+        background: #374151;
+        border-color: #6b7280;
+      }
+      .docs-lang-btn.active {
+        background: #eef2ff;
+        border-color: #6366f1;
+        color: #4f46e5;
+        font-weight: 500;
+      }
+      body.dark-mode .docs-lang-btn.active {
+        background: #312e81;
+        border-color: #6366f1;
+        color: #c7d2fe;
+      }
+      .docs-main {
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 2rem;
+        gap: 3rem;
+        min-height: calc(100vh - 5rem);
+      }
+      .docs-sidebar {
+        width: 320px;
+        flex-shrink: 0;
+        position: sticky;
+        top: 5.5rem;
+        height: fit-content;
+        max-height: calc(100vh - 6rem);
+        overflow-y: auto;
+        scrollbar-width: thin;
+        scrollbar-color: #cbd5e1 transparent;
+      }
+      .docs-sidebar::-webkit-scrollbar {
+        width: 6px;
+      }
+      .docs-sidebar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .docs-sidebar::-webkit-scrollbar-thumb {
+        background-color: #cbd5e1;
+        border-radius: 3px;
+      }
+      .docs-sidebar::-webkit-scrollbar-thumb:hover {
+        background-color: #94a3b8;
+      }
+      body.dark-mode .docs-sidebar::-webkit-scrollbar-thumb {
+        background-color: #475569;
+      }
+      body.dark-mode .docs-sidebar::-webkit-scrollbar-thumb:hover {
+        background-color: #64748b;
+      }
+      .docs-nav-section {
+        background: #fff;
+        border-radius: 0.75rem;
+        padding: 1.25rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        transition: background-color 0.3s ease;
+        border: 1px solid #f3f4f6;
+      }
+      body.dark-mode .docs-nav-section {
+        background: #1e293b;
+        border-color: #334155;
+      }
+      .docs-nav-title {
+        font-size: 0.875rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #4f46e5;
+        margin-bottom: 1rem;
+        letter-spacing: 0.05em;
+        transition: color 0.3s ease;
+      }
+      body.dark-mode .docs-nav-title {
+        color: #a5b4fc;
+      }
+      .docs-nav-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .docs-nav-item {
+        margin-bottom: 0.375rem;
+      }
+      .docs-nav-link {
+        display: block;
+        padding: 0.75rem 1rem;
+        color: #6b7280;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        transition: all 0.2s ease;
+        border-left: 3px solid transparent;
+      }
+      body.dark-mode .docs-nav-link {
+        color: #9ca3af;
+      }
+      .docs-nav-link:hover {
+        background: #f8fafc;
+        color: #374151;
+        border-left-color: #e5e7eb;
+        transform: translateX(2px);
+      }
+      body.dark-mode .docs-nav-link:hover {
+        background: #374151;
+        color: #f1f5f9;
+        border-left-color: #4b5563;
+      }
+      .docs-nav-link.active {
+        background: #eff6ff;
+        color: #4f46e5;
+        font-weight: 600;
+        border-left-color: #4f46e5;
+        box-shadow: 0 1px 3px rgba(79, 70, 229, 0.1);
+      }
+      body.dark-mode .docs-nav-link.active {
+        background: #312e81;
+        color: #c7d2fe;
+        border-left-color: #a5b4fc;
+        box-shadow: 0 1px 3px rgba(165, 180, 252, 0.1);
+      }
+      .docs-content {
+        flex: 1;
+        min-width: 0;
+      }
+      .docs-article {
+        background: #fff;
+        border-radius: 0.75rem;
+        padding: 3rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        transition: background-color 0.3s ease;
+        max-width: none;
+        line-height: 1.7;
+        font-size: 16px;
+      }
+      body.dark-mode .docs-article {
+        background: #1e293b;
+      }
+
+      /* Enhanced Typography for Content */
+      .docs-article h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #111827;
+        margin-bottom: 1.5rem;
+        margin-top: 0;
+        line-height: 1.2;
+        letter-spacing: -0.025em;
+      }
+      body.dark-mode .docs-article h1 {
+        color: #f9fafb;
+      }
+
+      .docs-article h2 {
+        font-size: 1.875rem;
+        font-weight: 600;
+        color: #1f2937;
+        margin-top: 3rem;
+        margin-bottom: 1.25rem;
+        line-height: 1.3;
+        letter-spacing: -0.025em;
+        border-bottom: 1px solid #e5e7eb;
+        padding-bottom: 0.75rem;
+      }
+      body.dark-mode .docs-article h2 {
+        color: #f3f4f6;
+        border-bottom-color: #374151;
+      }
+
+      .docs-article h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #374151;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        line-height: 1.4;
+      }
+      body.dark-mode .docs-article h3 {
+        color: #e5e7eb;
+      }
+
+      .docs-article h4 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #4b5563;
+        margin-top: 2rem;
+        margin-bottom: 0.75rem;
+        line-height: 1.5;
+      }
+      body.dark-mode .docs-article h4 {
+        color: #d1d5db;
+      }
+
+      .docs-article p {
+        margin-bottom: 1.5rem;
+        color: #374151;
+        line-height: 1.7;
+        font-size: 16px;
+      }
+      body.dark-mode .docs-article p {
+        color: #d1d5db;
+      }
+
+      .docs-article ul,
+      .docs-article ol {
+        margin-bottom: 1.5rem;
+        padding-left: 1.5rem;
+        color: #374151;
+      }
+      body.dark-mode .docs-article ul,
+      body.dark-mode .docs-article ol {
+        color: #d1d5db;
+      }
+
+      .docs-article li {
+        margin-bottom: 0.5rem;
+        line-height: 1.7;
+      }
+
+      .docs-article li::marker {
+        color: #6366f1;
+      }
+      body.dark-mode .docs-article li::marker {
+        color: #a5b4fc;
+      }
+
+      .docs-article a {
+        color: #4f46e5;
+        text-decoration: none;
+        font-weight: 500;
+        border-bottom: 1px solid transparent;
+        transition: all 0.2s ease;
+      }
+      .docs-article a:hover {
+        color: #4338ca;
+        border-bottom-color: #4338ca;
+      }
+      body.dark-mode .docs-article a {
+        color: #a5b4fc;
+      }
+      body.dark-mode .docs-article a:hover {
+        color: #c7d2fe;
+        border-bottom-color: #c7d2fe;
+      }
+
+      .docs-article blockquote {
+        border-left: 4px solid #4f46e5;
+        padding-left: 1.5rem;
+        margin: 2rem 0;
+        font-style: italic;
+        color: #6b7280;
+        background: #f8fafc;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+      }
+      body.dark-mode .docs-article blockquote {
+        border-left-color: #a5b4fc;
+        color: #9ca3af;
+        background: #1f2937;
+      }
+
+      .docs-article code {
+        background: #f3f4f6;
+        color: #e11d48;
+        padding: 0.125rem 0.375rem;
+        border-radius: 0.375rem;
+        font-size: 0.875em;
+        font-weight: 500;
+        font-family:
+          "SF Mono", Monaco, Inconsolata, "Roboto Mono", Consolas,
+          "Courier New", monospace;
+      }
+      body.dark-mode .docs-article code {
+        background: #374151;
+        color: #fbbf24;
+      }
+
+      .docs-article pre {
+        background: #1f2937;
+        color: #f9fafb;
+        padding: 1.5rem;
+        border-radius: 0.75rem;
+        overflow-x: auto;
+        margin: 1.5rem 0;
+        border: 1px solid #374151;
+      }
+      .docs-article pre code {
+        background: transparent;
+        color: inherit;
+        padding: 0;
+        border-radius: 0;
+        font-size: 0.875rem;
+      }
+
+      .docs-article table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 2rem 0;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        border: 1px solid #e5e7eb;
+      }
+      body.dark-mode .docs-article table {
+        border-color: #374151;
+      }
+
+      .docs-article th {
+        background: #f9fafb;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+        color: #374151;
+        border-bottom: 1px solid #e5e7eb;
+      }
+      body.dark-mode .docs-article th {
+        background: #374151;
+        color: #f3f4f6;
+        border-bottom-color: #4b5563;
+      }
+
+      .docs-article td {
+        padding: 1rem;
+        border-bottom: 1px solid #f3f4f6;
+        color: #6b7280;
+      }
+      body.dark-mode .docs-article td {
+        border-bottom-color: #374151;
+        color: #d1d5db;
+      }
+
+      .docs-article hr {
+        border: none;
+        height: 1px;
+        background: #e5e7eb;
+        margin: 3rem 0;
+      }
+      body.dark-mode .docs-article hr {
+        background: #374151;
+      }
+
+      /* Call-to-action boxes */
+      .docs-article .callout {
+        background: #eff6ff;
+        border: 1px solid #bfdbfe;
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        margin: 2rem 0;
+      }
+      body.dark-mode .docs-article .callout {
+        background: #1e3a8a;
+        border-color: #3b82f6;
+      }
+
+      /* Enhanced spacing for better readability */
+      .docs-article > *:first-child {
+        margin-top: 0;
+      }
+      .docs-article > *:last-child {
+        margin-bottom: 0;
+      }
+
+      /* Font Awesome Icon Styling */
+      .docs-search-icon {
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #9ca3af;
+        font-size: 0.875rem;
+        z-index: 1;
+      }
+
+      .docs-settings-btn i {
+        font-size: 1.125rem;
+        color: #6b7280;
+        transition: color 0.2s ease;
+      }
+      .docs-settings-btn:hover i {
+        color: #374151;
+      }
+      body.dark-mode .docs-settings-btn i {
+        color: #9ca3af;
+      }
+      body.dark-mode .docs-settings-btn:hover i {
+        color: #f3f4f6;
+      }
+
+      .docs-theme-btn i {
+        margin-right: 0.5rem;
+        font-size: 0.875rem;
+      }
+
+      .docs-search-close i {
+        font-size: 1rem;
+        color: #6b7280;
+      }
+      .docs-search-close:hover i {
+        color: #374151;
+      }
+      body.dark-mode .docs-search-close i {
+        color: #9ca3af;
+      }
+      body.dark-mode .docs-search-close:hover i {
+        color: #f3f4f6;
+      }
+
+      /* Navigation Icons */
+      .docs-nav-link i {
+        margin-right: 0.75rem;
+        width: 1rem;
+        text-align: center;
+        font-size: 0.875rem;
+        opacity: 0.7;
+        transition: opacity 0.2s ease;
+      }
+      .docs-nav-link:hover i,
+      .docs-nav-link.active i {
+        opacity: 1;
+      }
+      .docs-search-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+        z-index: 1000;
+        display: none;
+      }
+      .docs-search-overlay.active {
+        display: block;
+      }
+      .docs-search-results {
+        max-width: 600px;
+        margin: 6rem auto 2rem;
+        background: #fff;
+        border-radius: 0.75rem;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        max-height: calc(100vh - 8rem);
+        overflow-y: auto;
+        transition: background-color 0.3s ease;
+      }
+      body.dark-mode .docs-search-results {
+        background: #1e293b;
+      }
+      .docs-search-header {
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid #e5e7eb;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      body.dark-mode .docs-search-header {
+        border-bottom-color: #334155;
+      }
+      .docs-search-close {
+        padding: 0.25rem;
+        color: #6b7280;
+        cursor: pointer;
+        transition: color 0.3s ease;
+      }
+      body.dark-mode .docs-search-close {
+        color: #d1d5db;
+      }
+      .docs-search-list {
+        padding: 0;
+        margin: 0;
+      }
+      .docs-search-item {
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid #f3f4f6;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      body.dark-mode .docs-search-item {
+        border-bottom-color: #334155;
+      }
+      .docs-search-item:hover {
+        background: #f9fafb;
+      }
+      body.dark-mode .docs-search-item:hover {
+        background: #374151;
+      }
+      .docs-search-item:last-child {
+        border-bottom: none;
+      }
+      .docs-result-title {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #111827;
+        margin-bottom: 0.25rem;
+        transition: color 0.3s ease;
+      }
+      body.dark-mode .docs-result-title {
+        color: #f1f5f9;
+      }
+      .docs-result-excerpt {
+        font-size: 0.875rem;
+        color: #6b7280;
+        line-height: 1.4;
+        transition: color 0.3s ease;
+      }
+      body.dark-mode .docs-result-excerpt {
+        color: #d1d5db;
+      }
+      .docs-result-category {
+        font-size: 0.75rem;
+        color: #6366f1;
+        font-weight: 500;
+        margin-top: 0.25rem;
+        transition: color 0.3s ease;
+      }
+      body.dark-mode .docs-result-category {
+        color: #c7d2fe;
+      }
+      mark {
+        background-color: #fef3c7;
+        color: #92400e;
+        padding: 0.125rem 0.25rem;
+        border-radius: 0.25rem;
+        font-weight: 500;
+      }
+      body.dark-mode mark {
+        background-color: #451a03;
+        color: #fbbf24;
+      }
+
+      /* EU Cookie Notice */
+      .cookie-notice {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        max-width: 380px;
+        background: #fff;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+        z-index: 1000;
+        transform: translateY(100px);
+        opacity: 0;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 1px solid #e5e7eb;
+      }
+      .cookie-notice.show {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      body.dark-mode .cookie-notice {
+        background: #1e293b;
+        border-color: #334155;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      }
+      .cookie-notice-content {
+        margin-bottom: 16px;
+      }
+      .cookie-notice-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: #111827;
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      body.dark-mode .cookie-notice-title {
+        color: #f1f5f9;
+      }
+      .cookie-notice-text {
+        font-size: 14px;
+        color: #6b7280;
+        line-height: 1.5;
+        margin-bottom: 16px;
+      }
+      body.dark-mode .cookie-notice-text {
+        color: #d1d5db;
+      }
+      .cookie-notice-buttons {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .cookie-btn {
+        padding: 8px 16px;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s;
+        border: none;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .cookie-btn-accept {
+        background: #4f46e5;
+        color: #fff;
+      }
+      .cookie-btn-accept:hover {
+        background: #4338ca;
+      }
+      .cookie-btn-reject {
+        background: #f3f4f6;
+        color: #374151;
+        border: 1px solid #d1d5db;
+      }
+      .cookie-btn-reject:hover {
+        background: #e5e7eb;
+      }
+      body.dark-mode .cookie-btn-reject {
+        background: #374151;
+        color: #d1d5db;
+        border-color: #4b5563;
+      }
+      body.dark-mode .cookie-btn-reject:hover {
+        background: #4b5563;
+      }
+      .cookie-btn-policy {
+        background: transparent;
+        color: #4f46e5;
+        padding: 8px 12px;
+        font-size: 13px;
+      }
+      .cookie-btn-policy:hover {
+        background: #f0f0ff;
+      }
+      body.dark-mode .cookie-btn-policy {
+        color: #c7d2fe;
+      }
+      body.dark-mode .cookie-btn-policy:hover {
+        background: #312e81;
+      }
+      @media (max-width: 480px) {
+        .cookie-notice {
+          bottom: 10px;
+          right: 10px;
+          left: 10px;
+          max-width: none;
+        }
+        .cookie-notice-buttons {
+          flex-direction: column;
+        }
+        .cookie-btn {
+          width: 100%;
+        }
+      }
+      @media (max-width: 768px) {
+        .docs-search {
+          display: none;
+        }
+        .docs-main {
+          flex-direction: column;
+          padding: 1rem;
+        }
+        .docs-sidebar {
+          position: static;
+          width: 100%;
+        }
+      }
+
+      /* Footer Styling */
+      .docs-footer {
+        margin-top: 3rem;
+        padding: 2rem 0;
+        border-top: 1px solid #e5e7eb;
+        background-color: #f9fafb;
+      }
+
+      .docs-footer .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      .docs-footer .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-bottom: 1rem;
+        justify-content: center;
+      }
+
+      .docs-footer .footer-links a {
+        color: #6b7280;
+        text-decoration: none;
+        font-size: 0.875rem;
+        transition: color 0.2s ease;
+      }
+
+      .docs-footer .footer-links a:hover {
+        color: #2563eb;
+      }
+
+      .docs-footer .footer-text {
+        text-align: center;
+        color: #6b7280;
+        font-size: 0.875rem;
+      }
+
+      .docs-footer .footer-text p {
+        margin: 0;
+      }
+
+      /* Dark mode footer */
+      body.dark-mode .docs-footer {
+        border-top-color: #374151;
+        background-color: #1f2937;
+      }
+
+      body.dark-mode .docs-footer .footer-links a {
+        color: #9ca3af;
+      }
+
+      body.dark-mode .docs-footer .footer-links a:hover {
+        color: #60a5fa;
+      }
+
+      body.dark-mode .docs-footer .footer-text {
+        color: #9ca3af;
+      }
+
+      @media (max-width: 768px) {
+        .docs-footer .footer-links {
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="docs-header">
+      <div class="docs-container">
+        <a href="{{ '/' | relative_url }}" class="docs-brand">
+          <img
+            src="{{ '/assets/images/logo.svg' | relative_url }}"
+            alt="Give Protocol"
+            width="32"
+            height="32"
+          />
+          <span>Give Protocol Docs</span>
+        </a>
+
+        <div class="docs-search">
+          <i class="fas fa-search docs-search-icon"></i>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search documentation..."
+          />
+        </div>
+
+        <div class="docs-actions">
+          <a href="https://giveprotocol.io" class="docs-btn">Main Site</a>
+
+          <div class="docs-settings">
+            <button class="docs-settings-btn" id="settings-toggle">
+              <i class="fas fa-cog"></i>
+            </button>
+
+            <div class="docs-settings-menu" id="settings-menu">
+              <div class="docs-settings-section">
+                <h4 class="docs-settings-heading">Theme</h4>
+                <div class="docs-theme-options">
+                  <button class="docs-theme-btn active" data-theme="light">
+                    <i class="fas fa-sun"></i>
+                    Light
+                  </button>
+                  <button class="docs-theme-btn" data-theme="dark">
+                    <i class="fas fa-moon"></i>
+                    Dark
+                  </button>
+                </div>
+              </div>
+
+              <div class="docs-settings-section">
+                <h4 class="docs-settings-heading">Language</h4>
+                <div class="docs-lang-options">
+                  <button class="docs-lang-btn active" data-lang="en">
+                    🇺🇸 English
+                  </button>
+                  <button class="docs-lang-btn" data-lang="es">
+                    🇪🇸 Español
+                  </button>
+                  <button class="docs-lang-btn" data-lang="de">
+                    🇩🇪 Deutsch
+                  </button>
+                  <button class="docs-lang-btn" data-lang="fr">
+                    🇫🇷 Français
+                  </button>
+                  <button class="docs-lang-btn" data-lang="ja">
+                    🇯🇵 日本語
+                  </button>
+                  <button class="docs-lang-btn" data-lang="zh-CN">
+                    🇨🇳 简体中文
+                  </button>
+                  <button class="docs-lang-btn" data-lang="ko">
+                    🇰🇷 한국어
+                  </button>
+                  <button class="docs-lang-btn" data-lang="ar">
+                    🇸🇦 العربية
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="docs-main">
+      <!-- Sidebar -->
+      <aside class="docs-sidebar">
+        <div class="docs-nav-section">
+          <h3 class="docs-nav-title">Getting Started</h3>
+          <ul class="docs-nav-list">
+            <li class="docs-nav-item">
+              <a
+                href="{{ '/introduction/what-is-give-protocol/' | relative_url }}"
+                class="docs-nav-link {% if page.url contains 'what-is-give-protocol' %}active{% endif %}"
+              >
+                What is Give Protocol?
+              </a>
+            </li>
+            <li class="docs-nav-item">
+              <a
+                href="{{ '/getting-started/creating-account/' | relative_url }}"
+                class="docs-nav-link {% if page.url contains 'creating-account' %}active{% endif %}"
+              >
+                Creating Account
+              </a>
+            </li>
+            <li class="docs-nav-item">
+              <a
+                href="{{ '/getting-started/wallet-connection/' | relative_url }}"
+                class="docs-nav-link {% if page.url contains 'wallet-connection' %}active{% endif %}"
+              >
+                Wallet Connection
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="docs-nav-section">
+          <h3 class="docs-nav-title">User Guides</h3>
+          <ul class="docs-nav-list">
+            <li class="docs-nav-item">
+              <a
+                href="{{ '/user-guides/donors/' | relative_url }}"
+                class="docs-nav-link {% if page.url contains 'donors' %}active{% endif %}"
+              >
+                For Donors
+              </a>
+            </li>
+            <li class="docs-nav-item">
+              <a
+                href="{{ '/user-guides/organizations/' | relative_url }}"
+                class="docs-nav-link {% if page.url contains 'organizations' %}active{% endif %}"
+              >
+                For Organizations
+              </a>
+            </li>
+            <li class="docs-nav-item">
+              <a
+                href="{{ '/user-guides/volunteers/' | relative_url }}"
+                class="docs-nav-link {% if page.url contains 'volunteers' %}active{% endif %}"
+              >
+                For Volunteers
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="docs-nav-section">
+          <h3 class="docs-nav-title">Help & Support</h3>
+          <ul class="docs-nav-list">
+            <li class="docs-nav-item">
+              <a
+                href="{{ '/help-center/faq/' | relative_url }}"
+                class="docs-nav-link {% if page.url contains 'faq' %}active{% endif %}"
+              >
+                FAQ
+              </a>
+            </li>
+            <li class="docs-nav-item">
+              <a
+                href="{{ '/help-center/need-help/' | relative_url }}"
+                class="docs-nav-link {% if page.url contains 'need-help' %}active{% endif %}"
+              >
+                Need Help?
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Content -->
+      <div class="docs-content">
+        <article class="docs-article">{{ content }}</article>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="docs-footer">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="{{ '/safety-security/cookie-policy/' | relative_url }}"
+            >Cookie Policy</a
+          >
+          <a href="{{ '/safety-security/platform-security/' | relative_url }}"
+            >Privacy Policy</a
+          >
+          <a href="{{ '/help-center/need-help/' | relative_url }}"
+            >Contact Us</a
+          >
+          <a href="https://giveprotocol.io" target="_blank">Main Website</a>
+        </div>
+        <div class="footer-text">
+          <p>
+            {{ site.footer_content | default: "Copyright &copy; 2025 Give
+            Protocol. All rights reserved." }}
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Search Overlay -->
+    <div class="docs-search-overlay" id="search-overlay">
+      <div class="docs-search-results">
+        <div class="docs-search-header">
+          <h3>Search Results</h3>
+          <button class="docs-search-close" id="search-close">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="docs-search-list" id="search-results"></div>
+      </div>
+    </div>
+
+    <!-- Google Translate -->
+    <div id="google_translate_element" style="display: none"></div>
+
+    <!-- JavaScript -->
+    <script>
+      // Settings dropdown
+      const settingsToggle = document.getElementById("settings-toggle");
+      const settingsMenu = document.getElementById("settings-menu");
+
+      settingsToggle.addEventListener("click", function (e) {
+        e.stopPropagation();
+        settingsMenu.style.display =
+          settingsMenu.style.display === "block" ? "none" : "block";
+      });
+
+      document.addEventListener("click", function (e) {
+        if (
+          !settingsToggle.contains(e.target) &&
+          !settingsMenu.contains(e.target)
+        ) {
+          settingsMenu.style.display = "none";
+        }
+      });
+
+      // Theme switching
+      const themeButtons = document.querySelectorAll(".docs-theme-btn");
+      const savedTheme = localStorage.getItem("docs-theme") || "light";
+
+      document.body.classList.toggle("dark-mode", savedTheme === "dark");
+
+      themeButtons.forEach((button) => {
+        if (button.dataset.theme === savedTheme) {
+          button.classList.add("active");
+        }
+
+        button.addEventListener("click", function () {
+          const theme = this.dataset.theme;
+          localStorage.setItem("docs-theme", theme);
+          document.body.classList.toggle("dark-mode", theme === "dark");
+
+          themeButtons.forEach((btn) => btn.classList.remove("active"));
+          this.classList.add("active");
+
+          settingsMenu.style.display = "none";
+        });
+      });
+
+      // Language switching
+      const langButtons = document.querySelectorAll(".docs-lang-btn");
+
+      langButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          const lang = this.dataset.lang;
+
+          if (lang === "en") {
+            // Clear translation
+            const url = window.location.pathname + window.location.search;
+            window.location.href = url;
+          } else {
+            // Use hash-based translation trigger
+            let langCode = lang;
+            // Map language codes to Google Translate codes
+            const langMap = {
+              "zh-CN": "zh-CN",
+              ar: "ar",
+              ko: "ko",
+              ja: "ja",
+              es: "es",
+              de: "de",
+              fr: "fr",
+            };
+
+            langCode = langMap[lang] || lang;
+
+            // Set hash to trigger translation
+            window.location.hash = `googtrans(en|${langCode})`;
+            window.location.reload();
+          }
+
+          langButtons.forEach((btn) => btn.classList.remove("active"));
+          this.classList.add("active");
+
+          settingsMenu.style.display = "none";
+        });
+      });
+
+      // Enhanced search functionality
+      const searchInput = document.getElementById("search-input");
+      const searchOverlay = document.getElementById("search-overlay");
+      const searchResults = document.getElementById("search-results");
+      const searchClose = document.getElementById("search-close");
+
+      let searchData = [];
+
+      // Load search data with multiple fallback strategies
+      async function loadSearchData() {
+        const possibleUrls = [
+          '{{ "/search.json" | relative_url }}',
+          "/search.json",
+          "./search.json",
+          "../search.json",
+          "../../search.json",
+        ];
+
+        for (const url of possibleUrls) {
+          try {
+            console.log(`Trying to load search data from: ${url}`);
+            const response = await fetch(url);
+            if (response.ok) {
+              const data = await response.json();
+              searchData = data;
+              console.log(
+                `Search data loaded successfully from: ${url} (${data.length} items)`,
+              );
+              return;
+            }
+          } catch (error) {
+            console.log(`Failed to load from ${url}:`, error.message);
+          }
+        }
+
+        // Final fallback: Create basic search data from navigation
+        console.log("Using navigation fallback for search data");
+        const navLinks = document.querySelectorAll(".docs-nav-link");
+        searchData = Array.from(navLinks).map((link) => ({
+          title: link.textContent.trim(),
+          url: link.getAttribute("href"),
+          content: link.textContent.trim(),
+          category: "Navigation",
+        }));
+        console.log(
+          `Fallback search data created (${searchData.length} items)`,
+        );
+      }
+
+      // Initialize search data
+      loadSearchData();
+
+      function highlightText(text, query) {
+        if (!query) return text;
+        const regex = new RegExp(
+          `(${query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})`,
+          "gi",
+        );
+        return text.replace(regex, "<mark>$1</mark>");
+      }
+
+      function calculateRelevance(item, query) {
+        const lowerQuery = query.toLowerCase();
+        const lowerTitle = item.title.toLowerCase();
+        const lowerContent = item.content.toLowerCase();
+
+        let score = 0;
+
+        // Title exact match gets highest score
+        if (lowerTitle === lowerQuery) score += 100;
+        // Title starts with query
+        else if (lowerTitle.startsWith(lowerQuery)) score += 50;
+        // Title contains query
+        else if (lowerTitle.includes(lowerQuery)) score += 25;
+
+        // Content matches
+        if (lowerContent.includes(lowerQuery)) score += 10;
+
+        // Multiple word matches
+        const queryWords = lowerQuery
+          .split(" ")
+          .filter((word) => word.length > 2);
+        queryWords.forEach((word) => {
+          if (lowerTitle.includes(word)) score += 5;
+          if (lowerContent.includes(word)) score += 2;
+        });
+
+        return score;
+      }
+
+      function performSearch(query) {
+        if (!query.trim()) {
+          searchOverlay.classList.remove("active");
+          return;
+        }
+
+        // Check if search data is loaded
+        if (!searchData || searchData.length === 0) {
+          searchResults.innerHTML = `
+            <div class="docs-search-item">
+              <div class="docs-search-title">Loading search data...</div>
+              <div class="docs-search-excerpt">Please wait while we load the search index.</div>
+            </div>
+          `;
+          searchOverlay.classList.add("active");
+
+          // Retry loading search data
+          loadSearchData().then(() => {
+            if (searchData.length > 0) {
+              performSearch(query); // Retry search after data loads
+            }
+          });
+          return;
+        }
+
+        const results = searchData
+          .filter((item) => {
+            const text = (
+              item.title +
+              " " +
+              item.content +
+              " " +
+              (item.category || "")
+            ).toLowerCase();
+            return text.includes(query.toLowerCase());
+          })
+          .map((item) => ({
+            ...item,
+            relevance: calculateRelevance(item, query),
+          }))
+          .sort((a, b) => b.relevance - a.relevance)
+          .slice(0, 8);
+
+        if (results.length === 0) {
+          searchResults.innerHTML = `
+            <div class="docs-search-item">
+              <div class="docs-result-title">No results found</div>
+              <div class="docs-result-excerpt">Try different keywords or check spelling</div>
+            </div>`;
+        } else {
+          searchResults.innerHTML = results
+            .map((result) => {
+              const highlightedTitle = highlightText(result.title, query);
+              const excerpt = result.content.substring(0, 150);
+              const highlightedExcerpt = highlightText(excerpt, query);
+
+              return `
+                <div class="docs-search-item" onclick="window.location.href='${result.url}'">
+                  <div class="docs-result-title">${highlightedTitle}</div>
+                  <div class="docs-result-excerpt">${highlightedExcerpt}...</div>
+                  ${result.category ? `<div class="docs-result-category">${result.category}</div>` : ""}
+                </div>
+              `;
+            })
+            .join("");
+        }
+
+        searchOverlay.classList.add("active");
+      }
+
+      searchInput.addEventListener("input", function () {
+        const query = this.value;
+        clearTimeout(this.searchTimeout);
+        this.searchTimeout = setTimeout(() => performSearch(query), 300);
+      });
+
+      searchInput.addEventListener("focus", function () {
+        if (this.value.trim()) {
+          performSearch(this.value);
+        }
+      });
+
+      searchClose.addEventListener("click", function () {
+        searchOverlay.classList.remove("active");
+        searchInput.value = "";
+      });
+
+      searchOverlay.addEventListener("click", function (e) {
+        if (e.target === searchOverlay) {
+          searchOverlay.classList.remove("active");
+        }
+      });
+
+      // Keyboard navigation
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          searchOverlay.classList.remove("active");
+        }
+      });
+      // Check for active language on page load
+      window.addEventListener("load", function () {
+        const hash = window.location.hash;
+        if (hash.includes("googtrans")) {
+          const match = hash.match(/googtrans\(en\|([^)]+)\)/);
+          if (match && match[1]) {
+            const activeLang = match[1];
+            langButtons.forEach((btn) => {
+              if (btn.dataset.lang === activeLang) {
+                btn.classList.add("active");
+              } else {
+                btn.classList.remove("active");
+              }
+            });
+          }
+        }
+      });
+    </script>
+
+    <!-- Google Translate -->
+    <script>
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            includedLanguages: "en,es,de,fr,ja,zh-CN,zh-TW,th,vi,ko,ar,hi",
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false,
+          },
+          "google_translate_element",
+        );
+      }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- EU Cookie Notice -->
+    <div class="cookie-notice" id="cookie-notice">
+      <div class="cookie-notice-content">
+        <div class="cookie-notice-title">🍪 We use cookies</div>
+        <div class="cookie-notice-text">
+          This site uses cookies to deliver its service and to analyze traffic.
+          By continuing to use this site, you consent to our use of cookies.
+        </div>
+      </div>
+      <div class="cookie-notice-buttons">
+        <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">
+          Accept
+        </button>
+        <button class="cookie-btn cookie-btn-reject" onclick="rejectCookies()">
+          Reject
+        </button>
+        <a
+          href="https://giveprotocol.io/privacy"
+          class="cookie-btn cookie-btn-policy"
+          target="_blank"
+          >Privacy Policy</a
+        >
+      </div>
+    </div>
+
+    <!-- Cookie Notice JavaScript -->
+    <script>
+      function showCookieNotice() {
+        const notice = document.getElementById("cookie-notice");
+        setTimeout(() => {
+          notice.classList.add("show");
+        }, 1000); // Show after 1 second
+      }
+
+      function hideCookieNotice() {
+        const notice = document.getElementById("cookie-notice");
+        notice.classList.remove("show");
+        setTimeout(() => {
+          notice.style.display = "none";
+        }, 400);
+      }
+
+      function acceptCookies() {
+        localStorage.setItem("give-docs-cookies-accepted", "true");
+        hideCookieNotice();
+
+        // Track cookie acceptance
+        if (window.i18n && window.i18n.trackEvent) {
+          window.i18n.trackEvent("cookie_consent", { status: "accepted" });
+        }
+      }
+
+      function rejectCookies() {
+        localStorage.setItem("give-docs-cookies-accepted", "false");
+        hideCookieNotice();
+
+        // Clear any existing analytics data
+        localStorage.removeItem("give_docs_analytics");
+        localStorage.removeItem("give_docs_search_analytics");
+        localStorage.removeItem("give_docs_navigation_analytics");
+        localStorage.removeItem("give_docs_settings_analytics");
+
+        // Track cookie rejection
+        if (window.i18n && window.i18n.trackEvent) {
+          window.i18n.trackEvent("cookie_consent", { status: "rejected" });
+        }
+      }
+
+      // Check if user has already made a choice
+      window.addEventListener("load", function () {
+        const cookieChoice = localStorage.getItem("give-docs-cookies-accepted");
+
+        if (cookieChoice === null) {
+          // User hasn't made a choice yet, show notice
+          showCookieNotice();
+        }
+      });
+    </script>
+  </body>
+</html>

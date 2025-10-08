@@ -1,0 +1,114 @@
+# Jekyll configuration for Give Protocol Documentation
+# Force rebuild: 2025-08-17-v4
+title: Give Protocol Documentation
+description: Official documentation for the Give Protocol charitable giving platform
+author: Give Protocol Team
+baseurl: "" # Leave empty if deploying to root of domain
+url: "https://docs.giveprotocol.io" # Custom domain for documentation
+
+# Theme and styling
+# Using custom theme - no external theme needed
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+
+# Collections
+collections:
+  guides:
+    output: true
+    permalink: /guides/:path/
+
+# Security Headers
+security:
+  content_security_policy: >-
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' 'unsafe-eval'
+    https://www.googletagmanager.com
+    https://translate.google.com
+    https://translate.googleapis.com;
+    style-src 'self' 'unsafe-inline'
+    https://fonts.googleapis.com
+    https://cdnjs.cloudflare.com;
+    font-src 'self'
+    https://fonts.gstatic.com
+    https://cdnjs.cloudflare.com
+    data:;
+    img-src 'self' data: blob:
+    https://www.googletagmanager.com
+    https://www.google-analytics.com;
+    connect-src 'self'
+    https://www.googletagmanager.com
+    https://www.google-analytics.com
+    https://translate.googleapis.com;
+    frame-src 'self';
+    media-src 'self';
+    object-src 'none';
+    base-uri 'self';
+    form-action 'self';
+    frame-ancestors 'none';
+    upgrade-insecure-requests;
+
+# Default values
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "modern"
+      nav_exclude: false
+      lang: "en"
+  - scope:
+      path: "es"
+      type: "pages"
+    values:
+      layout: "modern"
+      nav_exclude: false
+      lang: "es"
+  - scope:
+      path: "zh"
+      type: "pages"
+    values:
+      layout: "modern"
+      nav_exclude: false
+      lang: "zh"
+  - scope:
+      path: ""
+      type: "guides"
+    values:
+      layout: "modern"
+
+# Navigation
+nav_title: "Give Protocol"
+nav_logo: "/assets/images/logo.svg"
+
+# Footer
+footer_content: "Copyright &copy; 2025 Give Protocol. All rights reserved."
+
+# Search
+search_enabled: true
+search_tokenizer_separator: /[\s/]+/
+
+# External links
+external_links:
+  - title: "Main Website"
+    url: "https://giveprotocol.io"
+  - title: "GitHub"
+    url: "https://github.com/GiveProtocol/Duration-Give"
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - README.md
+  - LICENSE
