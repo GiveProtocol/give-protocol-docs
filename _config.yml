@@ -104,6 +104,10 @@ external_links:
   - title: "GitHub"
     url: "https://github.com/GiveProtocol/Duration-Give"
 
+# Include files that start with underscore
+include:
+  - _headers
+
 # Exclude from build
 exclude:
   - Gemfile
