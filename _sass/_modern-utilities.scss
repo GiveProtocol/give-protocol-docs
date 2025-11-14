@@ -60,12 +60,16 @@ body.preload * {
       gap: 12px;
       font-size: 18px;
       font-weight: 600;
-      color: var(--color-text-primary);
+      color: white;
       text-decoration: none;
       transition: color var(--transition-fast);
 
       &:hover {
-        color: var(--color-text-accent);
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      span {
+        color: white;
       }
 
       img {
