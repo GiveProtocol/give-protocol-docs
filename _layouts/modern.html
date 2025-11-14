@@ -61,7 +61,7 @@
     />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v=2025-11-12-v5" />
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v=2025-11-12-v6" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -526,91 +526,16 @@
     </div>
 
     <!-- Footer -->
-    <footer
-      class="modern-footer"
-      style="
-        width: 100%;
-        margin-top: 4rem;
-        padding: 3rem 0;
-        border-top: 1px solid #e5e7eb;
-        background-color: #f9fafb;
-        text-align: center;
-      "
-    >
-      <div
-        class="footer-content"
-        style="
-          max-width: 1280px;
-          margin: 0 auto;
-          padding: 0 2rem;
-          text-align: center;
-        "
-      >
-        <div
-          class="footer-links"
-          style="
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-            margin-bottom: 1.5rem;
-            flex-wrap: wrap;
-          "
-        >
-          <a
-            href="{{ '/safety-security/cookie-policy/' | relative_url }}"
-            style="
-              color: #6b7280;
-              text-decoration: none;
-              font-size: 0.9rem;
-              font-weight: 500;
-              padding: 0 1rem;
-              border-right: 1px solid #e5e7eb;
-            "
-            >Cookie Policy</a
-          >
-          <a
-            href="{{ '/safety-security/platform-security/' | relative_url }}"
-            style="
-              color: #6b7280;
-              text-decoration: none;
-              font-size: 0.9rem;
-              font-weight: 500;
-              padding: 0 1rem;
-              border-right: 1px solid #e5e7eb;
-            "
-            >Privacy Policy</a
-          >
-          <a
-            href="{{ '/help-center/need-help/' | relative_url }}"
-            style="
-              color: #6b7280;
-              text-decoration: none;
-              font-size: 0.9rem;
-              font-weight: 500;
-              padding: 0 1rem;
-              border-right: 1px solid #e5e7eb;
-            "
-            >Contact Us</a
-          >
-          <a
-            href="https://giveprotocol.io"
-            target="_blank"
-            style="
-              color: #6b7280;
-              text-decoration: none;
-              font-size: 0.9rem;
-              font-weight: 500;
-              padding: 0 1rem;
-            "
-            >Main Website</a
-          >
+    <footer class="modern-footer site-footer">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="{{ '/safety-security/cookie-policy/' | relative_url }}">Cookie Policy</a>
+          <a href="{{ '/safety-security/platform-security/' | relative_url }}">Privacy Policy</a>
+          <a href="{{ '/help-center/need-help/' | relative_url }}">Contact Us</a>
+          <a href="https://giveprotocol.io" target="_blank">Main Website</a>
         </div>
-        <div class="footer-text" style="text-align: center">
-          <p style="margin: 0; color: #6b7280; font-size: 0.875rem">
-            {{ site.footer_content | default: "Copyright &copy; 2025 Give
-            Protocol. All rights reserved." }}
-          </p>
+        <div class="footer-text">
+          <p>{{ site.footer_content | default: "Copyright &copy; 2025 Give Protocol. All rights reserved." }}</p>
         </div>
       </div>
     </footer>
@@ -722,14 +647,23 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 40px;
+        min-width: 40px;
         height: 40px;
-        padding: 0;
+        padding: 8px 12px;
         cursor: pointer;
         background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 8px;
+        transition: all 0.2s ease;
+      }
+
+      .theme-toggle:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-color: rgba(255, 255, 255, 0.5);
       }
 
       .theme-toggle i {
+        color: white;
         font-size: 1rem;
         transition: transform 0.3s ease;
       }
