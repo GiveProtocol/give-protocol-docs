@@ -61,7 +61,7 @@
     />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v=2025-11-12-v4" />
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v=2025-11-12-v5" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -134,6 +134,9 @@
         </div>
 
         <div class="header-actions">
+          <button id="theme-toggle" class="btn-link theme-toggle" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+          </button>
           <a href="https://giveprotocol.io" class="btn-link"> Main Site </a>
         </div>
       </div>
@@ -658,6 +661,35 @@
 
         lastScrollY = currentScrollY;
       });
+
+      // Dark mode toggle
+      const themeToggle = document.getElementById("theme-toggle");
+      const themeIcon = themeToggle.querySelector("i");
+
+      // Check for saved theme preference or default to light mode
+      const savedTheme = localStorage.getItem("theme") || "light";
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+        themeIcon.classList.remove("fa-moon");
+        themeIcon.classList.add("fa-sun");
+      }
+
+      // Toggle theme on button click
+      themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        const isDark = document.body.classList.contains("dark-mode");
+
+        // Update icon
+        if (isDark) {
+          themeIcon.classList.remove("fa-moon");
+          themeIcon.classList.add("fa-sun");
+          localStorage.setItem("theme", "dark");
+        } else {
+          themeIcon.classList.remove("fa-sun");
+          themeIcon.classList.add("fa-moon");
+          localStorage.setItem("theme", "light");
+        }
+      });
     </script>
 
     <!-- Font Awesome Icon Styles -->
@@ -684,6 +716,26 @@
         transform: translateY(-50%);
         color: #6b7280;
         font-size: 0.875rem;
+      }
+
+      .theme-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        cursor: pointer;
+        background: transparent;
+      }
+
+      .theme-toggle i {
+        font-size: 1rem;
+        transition: transform 0.3s ease;
+      }
+
+      .theme-toggle:hover i {
+        transform: scale(1.1);
       }
 
       .mobile-nav-toggle i {
