@@ -150,18 +150,21 @@
 // Dark mode with carefully crafted color palette
 body.dark-mode {
   // Dark mode semantic colors - matching main site dark emerald theme
-  --color-bg-primary: #0f172a;
-  --color-bg-secondary: #1e293b;
-  --color-bg-tertiary: #334155;
-  --color-bg-accent: rgba(16, 185, 129, 0.1);
-  --color-text-primary: #f1f5f9;
-  --color-text-secondary: #cbd5e1;
-  --color-text-tertiary: #94a3b8;
-  --color-text-accent: var(--emerald-400);
-  --color-border-primary: #334155;
-  --color-border-secondary: #475569;
-  --color-border-focus: var(--emerald-400);
-  --color-shadow: rgba(0, 0, 0, 0.3);
+  --color-bg-primary: #0a0f1a;        // Very dark blue-black (deeper than before)
+  --color-bg-secondary: #111827;       // Dark charcoal blue
+  --color-bg-tertiary: #1f2937;        // Lighter charcoal
+  --color-bg-accent: rgba(16, 185, 129, 0.15);  // Subtle emerald glow
+  --color-text-primary: #f9fafb;       // Almost white for headings
+  --color-text-secondary: #d1d5db;     // Light gray for body text
+  --color-text-tertiary: #9ca3af;      // Medium gray for muted text
+  --color-text-accent: var(--emerald-400);  // Bright emerald for accents
+  --color-border-primary: #1f2937;     // Subtle borders
+  --color-border-secondary: #374151;   // More visible borders
+  --color-border-focus: var(--emerald-400);  // Emerald focus rings
+  --color-shadow: rgba(0, 0, 0, 0.5);  // Deeper shadows for depth
+
+  // Override background to deep dark
+  background-color: #0a0f1a;
 }
 
 // Base styles with modern reset and improved typography
