@@ -1,0 +1,13 @@
+{
+  "name": "give-protocol-docs",
+  "version": "1.0.0",
+  "description": "Documentation site for Give Protocol",
+  "private": true,
+  "scripts": {
+    "serve": "bundle exec jekyll serve",
+    "build": "JEKYLL_ENV=production bundle exec jekyll build",
+    "search": "node generate-search.cjs",
+    "deploy": "npm run build && npm run deploy:site"
+  },
+  "devDependencies": {}
+}
