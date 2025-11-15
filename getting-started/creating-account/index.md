@@ -43,14 +43,14 @@ _Note: You can upgrade or switch account types later if needed._
 
 ### Step 3: Enter Basic Information
 
-#### For All Account Types:
+#### For All Account Types
 
 - **Email Address**: Your primary contact email
 - **Password**: Minimum 8 characters with uppercase, lowercase, number, and special character
 - **Display Name**: How you want to appear on the platform
 - **Country**: Your country of residence
 
-#### Additional for Organizations:
+#### Additional for Organizations
 
 - **Organization Name**: Legal registered name
 - **Registration Number**: Charity/Non-profit number
@@ -127,6 +127,6 @@ If you created an organization account:
 
 - Visit our [Help Center](/docs/help-center/)
 - Check the [FAQ](/docs/help-center/faq/)
-- Contact support at support@giveprotocol.org
+- Contact support at <support@giveprotocol.org>
 
 Your privacy is important to us. We collect only necessary information, encrypt your data, and never share personal information without consent.
