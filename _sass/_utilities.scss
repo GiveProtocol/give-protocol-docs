@@ -8,6 +8,7 @@
 .d-flex { display: flex !important; }
 .d-inline-flex { display: inline-flex !important; }
 .d-grid { display: grid !important; }
+.hidden-element { display: none !important; }
 
 // Flexbox utilities
 .flex-row { flex-direction: row !important; }
@@ -221,9 +222,18 @@ $spacers: (
 }
 
 // User select utilities
-.user-select-all { user-select: all !important; }
-.user-select-auto { user-select: auto !important; }
-.user-select-none { user-select: none !important; }
+.user-select-all {
+  -webkit-user-select: all !important;
+  user-select: all !important;
+}
+.user-select-auto {
+  -webkit-user-select: auto !important;
+  user-select: auto !important;
+}
+.user-select-none {
+  -webkit-user-select: none !important;
+  user-select: none !important;
+}
 
 // Pointer events
 .pe-none { pointer-events: none !important; }

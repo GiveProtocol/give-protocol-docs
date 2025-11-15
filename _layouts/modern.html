@@ -532,7 +532,7 @@
           <a href="{{ '/safety-security/cookie-policy/' | relative_url }}">Cookie Policy</a>
           <a href="{{ '/safety-security/platform-security/' | relative_url }}">Privacy Policy</a>
           <a href="{{ '/help-center/need-help/' | relative_url }}">Contact Us</a>
-          <a href="https://giveprotocol.io" target="_blank">Main Website</a>
+          <a href="https://giveprotocol.io" target="_blank" rel="noopener">Main Website</a>
         </div>
         <div class="footer-text">
           <p>{{ site.footer_content | default: "Copyright &copy; 2025 Give Protocol. All rights reserved." }}</p>
@@ -545,7 +545,7 @@
       <div class="search-results-container">
         <div class="search-header">
           <h3>Search Results</h3>
-          <button class="close-search" id="close-search">
+          <button class="close-search" id="close-search" title="Close search results">
             <i class="fas fa-times"></i>
           </button>
         </div>

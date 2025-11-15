@@ -26,7 +26,7 @@ Give Protocol is volunteer-run, keeping our costs extremely low. With that said,
 
 ## Account & Security
 
-### How do I create an account?
+### How do I Create an Account?
 
 1. Visit [Give Protocol](https://giveprotocol.org)
 2. Click "Sign Up" in the top navigation
@@ -68,21 +68,20 @@ We support multiple cryptocurrencies including:
 - GLMR
 - Others to come
 
-### Can I get a tax receipt?
+### Can I get a Receipt?
 
 Yes! Eligible donations receive automatic tax receipts:
 
 - Generated automatically after donation confirmation
 - Sent to your registered email
-- Available in your account dashboard
+- Also available in your account dashboard
 - IRS-compliant for US donors
-- International tax receipts available
+- Donations made directly to other organizations are not receipted by Give Protocol. Contact information is provided on each organizations profile for outreach. 
 
 ### What are the minimum and maximum donation amounts?
 
 - **Minimum**: $1 USD equivalent
 - **Maximum**: No upper limit
-- Note: Large donations may require additional verification
 
 ### How can I track my donation?
 
@@ -91,8 +90,6 @@ Every donation is tracked on the blockchain:
 1. View transaction hash immediately after donation
 2. Track status in your dashboard
 3. See real-time updates from organizations
-4. Access impact reports
-5. Download annual giving statements
 
 ## Organizations
 
@@ -101,7 +98,7 @@ Every donation is tracked on the blockchain:
 Organizations must complete our verification process:
 
 1. Submit registration application
-2. Provide legal documentation (501(c)(3) status, etc.)
+2. Provide organizational legal documentation
 3. Pass compliance review
 4. Complete KYC requirements
 5. Undergo periodic re-verification
@@ -131,6 +128,7 @@ While volunteer hours aren't paid:
 - Qualify for exclusive opportunities
 - Enhance professional profile
 - Some organizations offer rewards
+- Organizations may choose to provide tokens of appreciation/tips at their own discretion
 
 ## Technical Questions
 
@@ -142,15 +140,6 @@ Yes, our smart contracts are:
 - Open source and verifiable
 - Regularly updated and re-audited
 - Bug bounty program active
-
-### What about gas fees?
-
-We help minimize gas fees by:
-
-- Supporting Layer 2 solutions
-- Batching transactions when possible
-- Providing gas estimates upfront
-- Offering alternative low-fee chains
 
 ## Troubleshooting
 
@@ -174,11 +163,9 @@ Common wallet connection fixes:
 - Check popup blockers
 - Ensure wallet is unlocked
 
-
 ## More Help
 
 Can't find what you're looking for?
 
 - Email: support@giveprotocol.org
-- Chat with out team over on Discord
-
+- Chat with our team over on Discord
