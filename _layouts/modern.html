@@ -118,7 +118,7 @@
             src="{{ '/assets/images/logo.svg' | relative_url }}"
             alt="Give Protocol"
           />
-          <span>Documentation</span>
+          <span>DOCUMENTATION</span>
         </a>
 
         <div class="header-search">
@@ -134,7 +134,7 @@
         </div>
 
         <div class="header-actions">
-          <button id="theme-toggle" class="btn-link theme-toggle" aria-label="Toggle dark mode">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle light/dark mode">
             <i class="fas fa-moon"></i>
           </button>
           <a href="https://giveprotocol.io" class="btn-link"> Main Site </a>
@@ -644,36 +644,48 @@
       }
 
       .theme-toggle {
-        display: flex;
+        display: flex !important;
         align-items: center;
         justify-content: center;
-        min-width: 40px;
-        height: 40px;
-        padding: 8px 12px;
+        min-width: 44px;
+        height: 44px;
+        padding: 10px;
         cursor: pointer;
-        background: transparent;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.2) !important;
+        border: 2px solid rgba(255, 255, 255, 0.4) !important;
+        border-radius: 10px;
         transition: all 0.2s ease;
       }
 
       .theme-toggle:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-        border-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.3) !important;
+        border-color: rgba(255, 255, 255, 0.6) !important;
       }
 
-      .theme-toggle i {
-        color: white;
-        font-size: 1.125rem;
-        transition: transform 0.3s ease;
+      .theme-toggle i,
+      .theme-toggle i.fas,
+      .theme-toggle i.fa-moon,
+      .theme-toggle i.fa-sun {
+        font-size: 1.5rem !important;
+        transition: transform 0.3s ease, color 0.3s ease;
+        -webkit-text-stroke: 0;
+        font-weight: 900 !important;
       }
 
-      body.dark-mode .theme-toggle i {
-        color: white;
+      /* Moon icon in light mode - bright white/yellow */
+      .theme-toggle i.fa-moon {
+        color: #fef3c7 !important;
+        text-shadow: 0 0 8px rgba(254, 243, 199, 0.5);
+      }
+
+      /* Sun icon in dark mode - bright yellow/orange */
+      body.dark-mode .theme-toggle i.fa-sun {
+        color: #fbbf24 !important;
+        text-shadow: 0 0 10px rgba(251, 191, 36, 0.6);
       }
 
       .theme-toggle:hover i {
-        transform: scale(1.1);
+        transform: scale(1.15);
       }
 
       .mobile-nav-toggle i {

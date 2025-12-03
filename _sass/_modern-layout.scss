@@ -85,6 +85,52 @@
       display: flex;
       align-items: center;
       gap: 16px;
+
+      // Theme toggle button styling
+      .theme-toggle,
+      #theme-toggle {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        min-width: 44px;
+        height: 44px;
+        padding: 10px;
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.2) !important;
+        border: 2px solid rgba(255, 255, 255, 0.4) !important;
+        border-radius: 10px;
+        transition: all 0.2s ease;
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.3) !important;
+          border-color: rgba(255, 255, 255, 0.6) !important;
+        }
+
+        i,
+        i.fas,
+        i.fa-moon,
+        i.fa-sun {
+          font-size: 1.4rem !important;
+          font-style: normal !important;
+          transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        // Moon icon - cream/yellow color
+        i.fa-moon {
+          color: #fef3c7 !important;
+          text-shadow: 0 0 8px rgba(254, 243, 199, 0.5);
+        }
+
+        // Sun icon - bright yellow
+        i.fa-sun {
+          color: #fbbf24 !important;
+          text-shadow: 0 0 10px rgba(251, 191, 36, 0.6);
+        }
+
+        &:hover i {
+          transform: scale(1.15);
+        }
+      }
     }
   }
 

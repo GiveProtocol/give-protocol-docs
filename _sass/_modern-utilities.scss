@@ -413,7 +413,7 @@ body.preload * {
       }
 
       em,
-      i {
+      i:not(.fas):not(.fab):not(.far):not(.fal):not(.fad) {
         font-style: italic;
       }
 
