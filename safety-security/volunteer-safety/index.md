@@ -1,7 +1,7 @@
 ---
 title: Volunteer Safety
 description: Essential safety guidelines and best practices for volunteers on the Give Protocol platform
-permalink: /safety-security/volunteer-safety/
+permalink: /docs/volunteers/safety-guidelines/
 ---
 
 Your safety and well-being are our top priorities at Give Protocol. This guide provides comprehensive safety guidelines for volunteers participating in charitable activities through our platform.

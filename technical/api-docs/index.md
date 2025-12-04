@@ -2,6 +2,7 @@
 layout: modern
 title: "API Documentation"
 description: "Complete REST API documentation for integrating with Give Protocol services"
+permalink: /docs/technical/api-docs/
 ---
 
 # API Documentation

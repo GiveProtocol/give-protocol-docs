@@ -2,6 +2,7 @@
 layout: modern
 title: "Smart Contract Interactions"
 description: "Learn how to interact with Give Protocol's smart contracts for donations, verification, and more"
+permalink: /docs/technical/smart-contracts/
 ---
 
 # Smart Contract Interactions

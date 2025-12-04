@@ -16,13 +16,6 @@
   category: "For Donors"
   read_time: 4
 
-- slug: tax-documentation
-  title: "Tax Documentation & Receipts"
-  description: "Get IRS-compliant tax receipts for your charitable contributions"
-  url: "/docs/donors/tax-documentation/"
-  category: "For Donors"
-  read_time: 6
-
 - slug: verification
   title: "Organization Verification"
   description: "How nonprofits can get verified and start receiving donations"

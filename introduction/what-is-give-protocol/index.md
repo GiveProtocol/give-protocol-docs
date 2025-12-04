@@ -1,7 +1,7 @@
 ---
 title: What Is Give Protocol
 description: Learn about Give Protocol - a revolutionary blockchain-based platform transforming charitable giving through transparency, efficiency, and global accessibility
-permalink: /introduction/what-is-give-protocol/
+permalink: /docs/getting-started/what-is-give-protocol/
 date: 2025-08-17
 ---
 

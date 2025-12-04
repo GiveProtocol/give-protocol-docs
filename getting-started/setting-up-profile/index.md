@@ -2,6 +2,7 @@
 layout: modern
 title: "Setting Up Your Profile"
 description: "Complete guide to setting up your Give Protocol profile for donors, organizations, and volunteers"
+permalink: /docs/getting-started/setting-up-profile/
 ---
 
 # Setting Up Your Profile
