@@ -288,7 +288,7 @@ body.preload * {
     .content-card {
       background: var(--color-bg-primary);
       border-radius: var(--radius-xl);
-      padding: 48px;
+      padding: 24px 48px 48px 48px;
       box-shadow: var(--shadow-sm);
       border: 1px solid var(--color-border-primary);
       max-width: 800px;
@@ -300,7 +300,7 @@ body.preload * {
       }
 
       @media (max-width: 768px) {
-        padding: 24px;
+        padding: 16px 24px 24px 24px;
         border-radius: var(--radius-lg);
       }
     }
@@ -952,14 +952,14 @@ button {
   background: var(--color-bg-accent);
   border: 1px solid var(--color-border-primary);
   border-radius: var(--radius-xl);
-  padding: 24px;
-  margin: 24px 0;
+  padding: 16px 20px;
+  margin: 0 0 24px 0;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
 
   .search-callout-icon {
-    font-size: 24px;
+    font-size: 20px;
     opacity: 0.8;
   }
 
