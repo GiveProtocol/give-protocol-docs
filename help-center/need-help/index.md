@@ -2,10 +2,14 @@
 title: Need Help
 description: Comprehensive help and support resources for Give Protocol users
 permalink: /help-center/need-help/
+redirect_to: /docs/support/
 ---
 
-Get the support you need to make the most of your Give Protocol experience. Our comprehensive help resources are designed to resolve issues quickly and help you maximize your charitable impact.
+<script>window.location.href = "{{ '/docs/support/' | relative_url }}";</script>
 
+This page has moved. Please visit our new [Help & Support page](/docs/support/).
+
+<!--
 ## Quick Help Options
 
 ### Immediate Assistance
@@ -336,4 +340,4 @@ Stay informed via our Discord server for information about:
 3. **Be Prepared**: Have account information ready
 4. **Be Open**: Try suggested solutions
 5. **Follow Up**: Confirm when issues are resolved
-
+-->

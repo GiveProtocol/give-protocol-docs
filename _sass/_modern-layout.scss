@@ -208,12 +208,22 @@
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 
       .section-title {
+        display: flex;
+        align-items: center;
+        gap: 8px;
         font-size: 12px;
         font-weight: 600;
         text-transform: uppercase;
         color: #6b7280;
         margin-bottom: 12px;
         letter-spacing: 0.05em;
+
+        i {
+          font-size: 14px;
+          color: #047857;
+          width: 16px;
+          text-align: center;
+        }
       }
 
       .nav-list {
@@ -241,8 +251,8 @@
             }
 
             &.active {
-              background: #eef2ff;
-              color: #4f46e5;
+              background: #ecfdf5;
+              color: #047857;
               font-weight: 500;
 
               &::before {
@@ -253,7 +263,7 @@
                 transform: translateY(-50%);
                 width: 3px;
                 height: 16px;
-                background: #4f46e5;
+                background: #047857;
                 border-radius: 0 2px 2px 0;
               }
             }
@@ -595,6 +605,10 @@
 
       .section-title {
         color: var(--emerald-400); // Emerald section titles
+
+        i {
+          color: var(--emerald-400);
+        }
       }
 
       .nav-item a {
