@@ -306,11 +306,11 @@
     .content-card {
       background: #fff;
       border-radius: 12px;
-      padding: 32px;
+      padding: 16px 32px 32px 32px;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 
       @media (max-width: 768px) {
-        padding: 20px;
+        padding: 12px 20px 20px 20px;
       }
     }
 
@@ -319,17 +319,28 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      margin-bottom: 24px;
+      margin-bottom: 12px;
       font-size: 14px;
       color: #6b7280;
 
       a {
         color: #6b7280;
         text-decoration: none;
-        transition: color 0.15s;
+        transition: all 0.2s ease;
+        padding: 2px 6px;
+        border-radius: 4px;
 
         &:hover {
-          color: #4f46e5;
+          color: #7c3aed; // Violet color
+          background-color: rgba(124, 58, 237, 0.1); // Light violet background
+          text-decoration: underline;
+          text-underline-offset: 3px;
+        }
+
+        // Bold styling for Home link when on home page
+        &.active {
+          font-weight: 700;
+          color: #111827;
         }
       }
 
@@ -634,6 +645,30 @@
         background: #111827; // Match sidebar darkness
         border-color: #1f2937;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+      }
+
+      // Dark mode breadcrumb styles
+      .breadcrumbs {
+        a {
+          color: #9ca3af;
+
+          &:hover {
+            color: #a78bfa; // Light violet for dark mode
+            background-color: rgba(167, 139, 250, 0.15);
+          }
+
+          &.active {
+            color: #f3f4f6;
+          }
+        }
+
+        .separator {
+          color: #4b5563;
+        }
+
+        span:last-child {
+          color: #f3f4f6;
+        }
       }
 
       article {
