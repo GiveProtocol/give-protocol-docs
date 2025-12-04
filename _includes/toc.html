@@ -1,0 +1,91 @@
+{% comment %}
+Table of Contents Component
+Auto-generates from page headings
+{% endcomment %}
+
+<nav class="toc-container" id="toc">
+  <div class="toc-header">
+    <span>On this page</span>
+    <button class="toc-toggle" aria-label="Toggle table of contents">
+      <i class="fas fa-chevron-down"></i>
+    </button>
+  </div>
+  <div class="toc-content">
+    <ul class="toc-list" id="toc-list">
+      <!-- Populated by JavaScript -->
+    </ul>
+  </div>
+</nav>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const article = document.querySelector('article');
+  const tocList = document.getElementById('toc-list');
+  const tocContainer = document.getElementById('toc');
+
+  if (!article || !tocList) return;
+
+  const headings = article.querySelectorAll('h2, h3');
+
+  if (headings.length < 2) {
+    tocContainer.style.display = 'none';
+    return;
+  }
+
+  headings.forEach((heading, index) => {
+    // Add ID if not present
+    if (!heading.id) {
+      heading.id = 'heading-' + index;
+    }
+
+    const li = document.createElement('li');
+    li.className = 'toc-item toc-' + heading.tagName.toLowerCase();
+
+    const a = document.createElement('a');
+    a.href = '#' + heading.id;
+    a.textContent = heading.textContent;
+    a.addEventListener('click', function(e) {
+      e.preventDefault();
+      heading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.pushState(null, null, '#' + heading.id);
+    });
+
+    li.appendChild(a);
+    tocList.appendChild(li);
+  });
+
+  // Mobile toggle
+  const tocToggle = document.querySelector('.toc-toggle');
+  if (tocToggle) {
+    tocToggle.addEventListener('click', function() {
+      tocContainer.classList.toggle('toc-collapsed');
+    });
+  }
+
+  // Highlight current section on scroll
+  let ticking = false;
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      requestAnimationFrame(function() {
+        const scrollPos = window.scrollY + 100;
+        let current = null;
+
+        headings.forEach(heading => {
+          if (heading.offsetTop <= scrollPos) {
+            current = heading;
+          }
+        });
+
+        tocList.querySelectorAll('a').forEach(a => a.classList.remove('active'));
+        if (current) {
+          const activeLink = tocList.querySelector('a[href="#' + current.id + '"]');
+          if (activeLink) activeLink.classList.add('active');
+        }
+
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>

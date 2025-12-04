@@ -1,0 +1,73 @@
+# Popular Articles Data
+# Update this file to change which articles appear in the Popular Articles section
+# Ordered by popularity (most popular first)
+
+- slug: wallet-connection
+  title: "Wallet Connection Guide"
+  description: "Connect MetaMask, WalletConnect, or other Web3 wallets to start donating"
+  url: "/docs/getting-started/wallet-connection/"
+  category: "Getting Started"
+  read_time: 5
+
+- slug: making-donations
+  title: "Making Your First Donation"
+  description: "Step-by-step guide to donating cryptocurrency to verified organizations"
+  url: "/docs/donors/making-donations/"
+  category: "For Donors"
+  read_time: 4
+
+- slug: tax-documentation
+  title: "Tax Documentation & Receipts"
+  description: "Get IRS-compliant tax receipts for your charitable contributions"
+  url: "/docs/donors/tax-documentation/"
+  category: "For Donors"
+  read_time: 6
+
+- slug: verification
+  title: "Organization Verification"
+  description: "How nonprofits can get verified and start receiving donations"
+  url: "/docs/organizations/verification/"
+  category: "For Organizations"
+  read_time: 8
+
+- slug: supported-tokens
+  title: "Supported Cryptocurrencies"
+  description: "Complete list of tokens you can use for donations on Give Protocol"
+  url: "/docs/technical/supported-tokens/"
+  category: "Technical"
+  read_time: 3
+
+- slug: wallet-transactions
+  title: "Transaction Troubleshooting"
+  description: "Fix common issues with failed transactions and pending donations"
+  url: "/docs/troubleshooting/wallet-transactions/"
+  category: "Troubleshooting"
+  read_time: 5
+
+- slug: understanding-cefs
+  title: "Understanding CEFs"
+  description: "Learn about Charitable Endowment Funds and their tax advantages"
+  url: "/docs/donors/understanding-cefs/"
+  category: "For Donors"
+  read_time: 7
+
+- slug: time-tracking
+  title: "Volunteer Time Tracking"
+  description: "Log and verify your volunteer hours with blockchain-verified records"
+  url: "/docs/volunteers/time-tracking/"
+  category: "For Volunteers"
+  read_time: 4
+
+- slug: smart-contracts
+  title: "Smart Contract Overview"
+  description: "Technical deep-dive into Give Protocol's smart contract architecture"
+  url: "/docs/technical/smart-contracts/"
+  category: "Technical"
+  read_time: 12
+
+- slug: account-issues
+  title: "Account Troubleshooting"
+  description: "Solutions for login problems, profile issues, and account recovery"
+  url: "/docs/troubleshooting/account-issues/"
+  category: "Troubleshooting"
+  read_time: 4

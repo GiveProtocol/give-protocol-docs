@@ -1,0 +1,28 @@
+{% comment %}
+Callout Component
+Usage: {% include callout.html type="info" title="Note" content="Your text here" %}
+Types: info (blue), warning (amber), success (green), danger (red)
+{% endcomment %}
+
+{% assign callout_type = include.type | default: "info" %}
+
+<div class="callout callout-{{ callout_type }}">
+  <div class="callout-icon">
+    {% case callout_type %}
+      {% when "info" %}
+        <i class="fas fa-info-circle"></i>
+      {% when "warning" %}
+        <i class="fas fa-exclamation-triangle"></i>
+      {% when "success" %}
+        <i class="fas fa-check-circle"></i>
+      {% when "danger" %}
+        <i class="fas fa-times-circle"></i>
+    {% endcase %}
+  </div>
+  <div class="callout-content">
+    {% if include.title %}
+    <strong class="callout-title">{{ include.title }}</strong>
+    {% endif %}
+    <span class="callout-text">{{ include.content }}</span>
+  </div>
+</div>

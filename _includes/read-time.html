@@ -1,0 +1,13 @@
+{% comment %}
+Read Time Component
+Calculates estimated reading time based on content
+{% endcomment %}
+
+{% assign words = include.content | number_of_words %}
+{% assign minutes = words | divided_by: 200 %}
+{% if minutes < 1 %}{% assign minutes = 1 %}{% endif %}
+
+<span class="read-time">
+  <i class="fas fa-clock"></i>
+  {{ minutes }} min read
+</span>

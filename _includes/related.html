@@ -1,0 +1,24 @@
+{% comment %}
+Related Articles Component
+Usage: {% include related.html articles="article1,article2,article3" %}
+Articles should be slugs matching entries in _data/popular_articles.yml
+{% endcomment %}
+
+{% assign article_slugs = include.articles | split: "," %}
+
+<div class="related-articles">
+  <h3><i class="fas fa-book-open"></i> Related Articles</h3>
+  <div class="related-grid">
+    {% for slug in article_slugs %}
+      {% assign slug_trimmed = slug | strip %}
+      {% for article in site.data.popular_articles %}
+        {% if article.slug == slug_trimmed %}
+        <a href="{{ article.url | relative_url }}" class="related-item">
+          <span class="related-category">{{ article.category }}</span>
+          <span class="related-title">{{ article.title }}</span>
+        </a>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </div>
+</div>
