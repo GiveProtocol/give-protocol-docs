@@ -11,23 +11,40 @@ function findMarkdownFiles(dir, fileList = []) {
     const stat = fs.statSync(filePath);
 
     if (stat.isDirectory()) {
-      // Skip hidden directories and node_modules
-      if (
-        !file.startsWith(".") &&
-        file !== "node_modules" &&
-        file !== "_site"
-      ) {
+      // Skip hidden directories, node_modules, build output, and dev directories
+      const skipDirs = [
+        "node_modules",
+        "_site",
+        "vendor",
+        "guides",  // Developer guides, not user docs
+      ];
+      if (!file.startsWith(".") && !skipDirs.includes(file)) {
         findMarkdownFiles(filePath, fileList);
       }
-    } else if (
-      file.endsWith(".md") &&
-      !file.startsWith("test-") &&
-      !file.includes("TEST_REPORT") &&
-      !file.includes("README-SEARCH") &&
-      !file.includes("DEPLOYMENT-CHECKLIST") &&
-      !file.includes("SEARCH-ANALYTICS")
-    ) {
-      fileList.push(filePath);
+    } else if (file.endsWith(".md")) {
+      // Exclude non-documentation markdown files
+      const excludePatterns = [
+        "README.md",
+        "CHANGELOG.md",
+        "CONTRIBUTING.md",
+        "LICENSE.md",
+        "SECURITY.md",
+        "CLAUDE.md",
+        "test-",
+        "TEST_REPORT",
+        "README-SEARCH",
+        "DEPLOYMENT-CHECKLIST",
+        "SEARCH-ANALYTICS",
+        "SEARCH-FIX",
+        "JSX_ENTITY",
+        "supabase-upgrade",
+      ];
+      const shouldExclude = excludePatterns.some(
+        (pattern) => file.includes(pattern) || file === pattern
+      );
+      if (!shouldExclude) {
+        fileList.push(filePath);
+      }
     }
   });
 
@@ -73,7 +90,7 @@ function generateSearchData() {
       const searchItem = {
         title: parsed.data.title || path.basename(filePath, ".md"),
         category: parsed.data.category || "Documentation",
-        tags: parsed.data.tags || "",
+        tags: Array.isArray(parsed.data.tags) ? parsed.data.tags : [],
         url,
         date: parsed.data.date || new Date().toISOString(),
         content: parsed.content.replace(/\n/g, " ").replace(/\s+/g, " ").trim(),

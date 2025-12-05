@@ -6,8 +6,9 @@
   "scripts": {
     "serve": "bundle exec jekyll serve",
     "build": "JEKYLL_ENV=production bundle exec jekyll build",
-    "search": "node generate-search.cjs",
-    "deploy": "npm run build && npm run deploy:site"
+    "search": "node generate-search.cjs"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "gray-matter": "^4.0.3"
+  }
 }
