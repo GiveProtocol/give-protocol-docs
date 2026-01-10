@@ -375,18 +375,16 @@ When you log in, your dashboard provides:
 
 Now that you understand your dashboard:
 
-1. **[Explore Organizations](/docs/platform-features/search-discovery/)** - Find causes to support
-2. **[Set Up Recurring Giving](/docs/user-guides/donors/)** - Automate your impact
-3. **[Track Your Impact](/docs/user-guides/donors/)** - Measure your difference
-4. **[Join the Community](/docs/community/)** - Connect with other givers
+1. **[Explore Organizations](/docs/organizations/)** - Find causes to support
+2. **[Set Up Recurring Giving](/docs/donors/)** - Automate your impact
+3. **[Track Your Impact](/docs/donors/tracking-impact/)** - Measure your difference
 
 ## Need Help?
 
 If you need assistance with your dashboard:
 
-- **[Help Center](/docs/help-center/)** - Comprehensive guides
-- **[FAQ](/docs/help-center/faq/)** - Common questions
+- **[Support Center](/docs/support/)** - Comprehensive guides
+- **[Troubleshooting](/docs/troubleshooting/)** - Common questions
 - **Support**: support@giveprotocol.org
-- **[Community Forums](/docs/community/forums/)** - Peer assistance
 
 Your dashboard is designed to make charitable giving simple, transparent, and impactful. Take time to explore all features and customize it to match your giving style and goals.

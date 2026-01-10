@@ -60,5 +60,5 @@ Give Protocol 提供几个独特的特性：
 
 如果您有问题或需要帮助：
 
-- 查看我们的[常见问题](/zh/help-center/faq/)
-- [联系我们](/zh/help-center/need-help/)获取直接支持
+- 查看我们的[故障排除指南](/docs/troubleshooting/)
+- [支持中心](/docs/support/)获取直接支持

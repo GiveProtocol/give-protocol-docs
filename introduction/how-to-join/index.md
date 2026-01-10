@@ -270,10 +270,10 @@ Welcome to Give Protocol! Join thousands of volunteers and donors who are making
 
 ### Learning Resources
 
-- [Platform Features]({{ '/docs/platform-features/' | relative_url }})
-- [Safety & Security]({{ '/docs/safety-security/' | relative_url }})
-- [User Guides]({{ '/docs/user-guides/' | relative_url }})
-- [FAQ]({{ '/docs/help-center/faq/' | relative_url }})
+- [Organizations]({{ '/docs/organizations/' | relative_url }})
+- [Security Model]({{ '/docs/technical/security-model/' | relative_url }})
+- [Documentation]({{ '/docs/' | relative_url }})
+- [Troubleshooting]({{ '/docs/troubleshooting/' | relative_url }})
 
 ### Get Support
 

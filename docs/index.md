@@ -81,13 +81,6 @@ layout: modern
         <span class="check-desc">Donate crypto to verified charitable organizations</span>
       </div>
     </li>
-    <li class="checklist-item">
-      <span class="check-circle"></span>
-      <div class="check-content">
-        <span class="check-title"><a href="{{ '/docs/donors/tax-documentation/' | relative_url }}">Download tax receipt</a></span>
-        <span class="check-desc">Get IRS-compliant documentation for your contribution</span>
-      </div>
-    </li>
   </ul>
 </div>
 

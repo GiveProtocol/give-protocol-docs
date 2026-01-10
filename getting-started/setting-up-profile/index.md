@@ -68,4 +68,4 @@ Give Protocol supports three types of profiles:
 
 ## Need Help?
 
-Visit our [Help Center](/help-center/faq/) for additional support or [contact us](/community/contact/) directly.
+Visit our [Support Center](/docs/support/) for additional support or email us at support@giveprotocol.org.

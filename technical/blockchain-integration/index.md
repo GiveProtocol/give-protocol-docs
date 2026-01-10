@@ -2,6 +2,7 @@
 layout: modern
 title: "Blockchain Integration Explained"
 description: "Understanding how Give Protocol leverages blockchain technology for transparent and secure charitable giving"
+permalink: /docs/technical/blockchain-integration/
 ---
 
 # Blockchain Integration Explained
@@ -155,4 +156,4 @@ Give Protocol is built on the Moonbeam network, providing:
 
 ## Need Help?
 
-Check out our [API Documentation](/technical/api-docs/) for integration details or visit our [Developer Resources](/technical/smart-contracts/) for more technical information.
+Check out our [API Documentation](/docs/technical/api-docs/) for integration details or visit our [Developer Resources](/docs/technical/smart-contracts/) for more technical information.

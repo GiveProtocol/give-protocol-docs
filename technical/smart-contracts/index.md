@@ -261,4 +261,4 @@ it("should complete end-to-end donation", async function () {
 
 ## Need Help?
 
-Visit our [API Documentation](/technical/api-docs/) for REST API details or check out the [blockchain integration guide](/technical/blockchain-integration/) for more context.
+Visit our [API Documentation](/docs/technical/api-docs/) for REST API details or check out the [blockchain integration guide](/docs/technical/blockchain-integration/) for more context.

@@ -77,21 +77,21 @@ date: 2025-08-17
   <h2>Need Help?</h2>
   <p>Can't find what you're looking for?</p>
   <div class="guide-cards">
-    <a href="{{ '/help-center/' | relative_url }}" class="guide-card">
+    <a href="{{ '/docs/support/' | relative_url }}" class="guide-card">
       <div class="card-icon"><i class="fas fa-question-circle"></i></div>
       <div class="card-content">
-        <div class="card-title">Help Center</div>
+        <div class="card-title">Support Center</div>
         <div class="card-description">Comprehensive support resources</div>
       </div>
     </a>
-    <a href="{{ '/help-center/faq/' | relative_url }}" class="guide-card">
+    <a href="{{ '/docs/troubleshooting/' | relative_url }}" class="guide-card">
       <div class="card-icon"><i class="fas fa-list-ul"></i></div>
       <div class="card-content">
-        <div class="card-title">FAQ</div>
-        <div class="card-description">Frequently asked questions</div>
+        <div class="card-title">Troubleshooting</div>
+        <div class="card-description">Common issues and solutions</div>
       </div>
     </a>
-    <a href="{{ '/help-center/need-help/' | relative_url }}" class="guide-card">
+    <a href="{{ '/docs/support/' | relative_url }}" class="guide-card">
       <div class="card-icon"><i class="fas fa-headset"></i></div>
       <div class="card-content">
         <div class="card-title">Contact Support</div>

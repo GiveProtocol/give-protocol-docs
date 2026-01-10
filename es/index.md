@@ -60,5 +60,5 @@ Give Protocol ofrece varias características únicas:
 
 Si tiene preguntas o necesita asistencia:
 
-- Consulte nuestras [Preguntas Frecuentes](/es/help-center/faq/)
-- [Contáctenos](/es/help-center/need-help/) para soporte directo
+- Consulte nuestra [Guía de solución de problemas](/docs/troubleshooting/)
+- [Centro de soporte](/docs/support/) para asistencia directa

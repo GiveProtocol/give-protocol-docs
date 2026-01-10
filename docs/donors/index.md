@@ -20,11 +20,6 @@ Charitable Endowment Funds (CEFs) allow you to maximize your giving impact. Lear
 
 [Understanding CEFs](/docs/donors/understanding-cefs/){: .btn-secondary}
 
-### Tax Documentation
-Get the documentation you need for tax purposes. Learn about tax receipts, eligible donations, and reporting requirements.
-
-[Tax Documentation](/docs/donors/tax-documentation/){: .btn-secondary}
-
 ### Tracking Your Impact
 See how your donations make a difference. Track the organizations you support and view impact reports and updates.
 
@@ -40,8 +35,8 @@ Every donation is recorded on the blockchain, creating an immutable record of yo
 ### Lower Fees
 Traditional donation platforms often charge 3-5% or more. Give Protocol charges only a 1% protocol fee plus minimal blockchain gas fees, so more of your donation reaches the cause.
 
-### Tax Benefits
-Donations to verified 501(c)(3) organizations are tax-deductible. We provide IRS-compliant tax receipts automatically for eligible donations.
+### Donation Records
+All donations are recorded on the blockchain, providing transparent and verifiable records. Organizations may provide additional documentation as required by local regulations.
 
 ### Impact Visibility
 Track your donations over time and see updates from the organizations you support. Know exactly how your contributions are making a difference.

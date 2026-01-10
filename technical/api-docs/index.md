@@ -341,8 +341,8 @@ function verifyWebhook(payload, signature, secret) {
 - **Documentation**: Full API reference available
 - **SDK Examples**: Sample code in multiple languages
 - **Postman Collection**: Import ready-to-use requests
-- **Support**: [Contact our technical team](/community/contact/)
+- **Support**: Email support@giveprotocol.org
 
 ## Need Help?
 
-Check out our [smart contract documentation](/technical/smart-contracts/) for blockchain integration or visit our [Help Center](/help-center/faq/) for general support.
+Check out our [smart contract documentation](/docs/technical/smart-contracts/) for blockchain integration or visit our [Support Center](/docs/support/) for general support.

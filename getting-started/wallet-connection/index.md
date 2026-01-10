@@ -240,10 +240,9 @@ For organizations requiring multiple approvals:
 
 If you're having trouble with wallet connection:
 
-- **Check our [FAQ](/docs/help-center/faq/)** for common issues
-- **Visit [Help Center](/docs/help-center/)** for support
+- **Check our [Troubleshooting Guide](/docs/troubleshooting/wallet-transactions/)** for common issues
+- **Visit [Support Center](/docs/support/)** for help
 - **Contact support** at support@giveprotocol.org
-- **Join our [Community](/docs/community/)** for peer help
 
 ## Next Steps
 
@@ -251,7 +250,7 @@ Once your wallet is connected:
 
 1. **[Explore the Dashboard](/docs/getting-started/dashboard/)** - Learn the interface
 2. **[Make Your First Donation](/docs/getting-started/first-steps/)** - Start giving
-3. **[Browse Organizations](/docs/platform-features/search-discovery/)** - Find causes
+3. **[Browse Verified Organizations](/docs/organizations/)** - Find causes
 4. **[Understand Fees](/docs/technical/fees/)** - Know the costs
 
 Remember: Your wallet is your responsibility. Keep it secure, backup your seed phrase, and never share your private keys with anyone.

@@ -125,8 +125,8 @@ If you created an organization account:
 
 ## Need Help?
 
-- Visit our [Help Center](/docs/help-center/)
-- Check the [FAQ](/docs/help-center/faq/)
+- Visit our [Support Center](/docs/support/)
+- Check the [Troubleshooting Guide](/docs/troubleshooting/)
 - Contact support at <support@giveprotocol.org>
 
 Your privacy is important to us. We collect only necessary information, encrypt your data, and never share personal information without consent.

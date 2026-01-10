@@ -227,10 +227,9 @@ If you have time to offer, not just money:
 
 ### Self-Service Resources
 
-- **[Help Center](/docs/help-center/)** - Comprehensive guides
-- **[FAQ](/docs/help-center/faq/)** - Common questions
-- **[Community Forums](/docs/community/forums/)** - Peer support
-- **[Video Tutorials](/docs/resources/)** - Step-by-step guides
+- **[Support Center](/docs/support/)** - Comprehensive guides
+- **[Troubleshooting](/docs/troubleshooting/)** - Common questions
+- **[Technical Documentation](/docs/technical/)** - Detailed guides
 
 ### Contact Support
 
@@ -243,8 +242,8 @@ If you have time to offer, not just money:
 
 ### Connect with Others
 
-- **[Community Forums](/docs/community/forums/)** - Discussions and Q&A
-- **[Social Media](/docs/community/social/)** - Follow for updates
+- **Discord** - Discussions and Q&A
+- **Twitter/X** - Follow for updates
 - **Local meetups** - In-person events (where available)
 - **Online events** - Webinars and virtual meetups
 
@@ -275,9 +274,9 @@ If you have time to offer, not just money:
 
 Now that you've completed your first steps:
 
-1. **[Explore Organizations](/docs/platform-features/search-discovery/)** - Find more causes
-2. **[Learn About Verification](/docs/platform-features/verification/)** - Understand trust signals
-3. **[Join User Guides](/docs/user-guides/)** - Role-specific information
+1. **[Explore Organizations](/docs/organizations/)** - Find more causes
+2. **[Learn About Verification](/docs/organizations/verification/)** - Understand trust signals
+3. **[View Documentation](/docs/)** - Role-specific information
 4. **[Understand Fees](/docs/technical/fees/)** - Optimize your donations
 
 Congratulations on taking your first steps with Give Protocol! You're now part of a global community working to make charitable giving more transparent, efficient, and impactful.

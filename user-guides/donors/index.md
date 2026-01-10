@@ -319,7 +319,7 @@ Ready to make a difference? Here's how to begin:
 
 1. [Complete your profile]({{ '/docs/getting-started/creating-account/' | relative_url }})
 2. [Connect your wallet]({{ '/docs/getting-started/wallet-connection/' | relative_url }})
-3. [Browse organizations]({{ '/docs/platform-features/search-discovery/' | relative_url }})
+3. [Browse organizations]({{ '/docs/organizations/' | relative_url }})
 4. [Make your first donation]({{ '/docs/getting-started/first-steps/' | relative_url }})
 
 Welcome to the Give Protocol donor community. Your generosity, combined with blockchain transparency, creates lasting positive change. Every donation, no matter the size, contributes to a better world.

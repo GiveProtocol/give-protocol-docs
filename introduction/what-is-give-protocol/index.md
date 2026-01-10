@@ -206,8 +206,8 @@ Give Protocol is more than a platform – it's a movement to transform charitabl
 ### Get Started Today
 
 - [Create an Account]({{ '/docs/getting-started/creating-account/' | relative_url }})
-- [Browse Organizations]({{ '/docs/platform-features/search-discovery/' | relative_url }})
-- [Learn About Security]({{ '/docs/safety-security/' | relative_url }})
-- [Read Our FAQ]({{ '/docs/help-center/faq/' | relative_url }})
+- [Browse Organizations]({{ '/docs/organizations/' | relative_url }})
+- [Learn About Security]({{ '/docs/technical/security-model/' | relative_url }})
+- [Troubleshooting]({{ '/docs/troubleshooting/' | relative_url }})
 
 Together, we're building a more transparent, efficient, and impactful future for charitable giving.
