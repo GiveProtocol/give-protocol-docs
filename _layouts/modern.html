@@ -57,17 +57,17 @@
     <link
       rel="icon"
       type="image/svg+xml"
-      href="{{ '/assets/images/logo.svg' | relative_url }}"
+      href="{{ '/assets/images/give_logo_gradient.svg' | relative_url }}"
     />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v=2025-11-12-v6" />
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v=2026-03-18-v1" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
       rel="stylesheet"
     />
 
@@ -115,10 +115,10 @@
       <div class="header-container">
         <a href="{{ '/' | relative_url }}" class="brand">
           <img
-            src="{{ '/assets/images/logo.svg' | relative_url }}"
+            src="{{ '/assets/images/give_logo_gradient.svg' | relative_url }}"
             alt="Give Protocol"
           />
-          <span>Give Protocol Docs</span>
+          <span>Give Protocol <em>Docs</em></span>
         </a>
 
         <div class="header-search">
@@ -129,15 +129,20 @@
               id="search-input"
               placeholder="Search documentation..."
               data-translate="yes"
+              aria-label="Search documentation"
             />
+            <kbd class="search-kbd">Ctrl K</kbd>
           </div>
         </div>
 
         <div class="header-actions">
+          <a href="https://giveprotocol.io" class="btn-main-site" title="Go to main site">
+            <i class="fas fa-external-link-alt"></i>
+            <span>Main Site</span>
+          </a>
           <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle light/dark mode">
             <i class="fas fa-moon"></i>
           </button>
-          <a href="https://giveprotocol.io" class="btn-link"> Main Site </a>
         </div>
       </div>
     </header>
@@ -248,7 +253,8 @@
           <a href="https://giveprotocol.io" target="_blank" rel="noopener">Main Website</a>
         </div>
         <div class="footer-text">
-          <p>{{ site.footer_content | default: "Copyright &copy; 2025 Give Protocol. All rights reserved." }}</p>
+          <p>Copyright &copy; <span id="footer-year"></span> Give Protocol. All rights reserved.</p>
+          <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
         </div>
       </div>
     </footer>
@@ -286,18 +292,13 @@
 
       // Header scroll effect
       const header = document.querySelector(".modern-header");
-      let lastScrollY = window.scrollY;
 
       window.addEventListener("scroll", () => {
-        const currentScrollY = window.scrollY;
-
-        if (currentScrollY > 10) {
-          header.style.boxShadow = "0 4px 6px -1px rgba(0, 0, 0, 0.1)";
+        if (window.scrollY > 10) {
+          header.classList.add("scrolled");
         } else {
-          header.style.boxShadow = "none";
+          header.classList.remove("scrolled");
         }
-
-        lastScrollY = currentScrollY;
       });
 
       // Dark mode toggle
@@ -330,79 +331,95 @@
       });
     </script>
 
-    <!-- Font Awesome Icon Styles -->
+    <!-- Inline critical styles -->
     <style>
       /* Navigation icon styles */
       .nav-item a i {
         margin-right: 0.5rem;
         width: 1rem;
         text-align: center;
-        color: #6b7280;
+        color: var(--color-text-tertiary);
         transition: color 0.2s ease;
+        font-size: 0.8125rem;
       }
 
       .nav-item a:hover i,
       .nav-item a.active i {
-        color: #2563eb;
+        color: var(--emerald-600);
       }
 
-      /* Header icon styles */
+      /* Header search icon — hardcoded so dark mode doesn't affect it */
       .search-icon {
         position: absolute;
-        left: 0.75rem;
+        left: 0.875rem;
         top: 50%;
         transform: translateY(-50%);
-        color: #6b7280;
-        font-size: 0.875rem;
+        color: #94a3b8;
+        font-size: 0.8125rem;
+        pointer-events: none;
       }
 
+      /* Ctrl+K kbd badge */
+      .search-kbd {
+        position: absolute;
+        right: 0.75rem;
+        top: 50%;
+        transform: translateY(-50%);
+        display: inline-flex;
+        align-items: center;
+        gap: 2px;
+        padding: 2px 6px;
+        background: #f1f5f9;
+        border: 1px solid #e2e8f0;
+        border-radius: 4px;
+        font-size: 0.6875rem;
+        font-family: inherit;
+        color: #94a3b8;
+        pointer-events: none;
+        line-height: 1.3;
+      }
+
+      /* Theme toggle — hardcoded colors for white header */
       .theme-toggle {
         display: flex !important;
         align-items: center;
         justify-content: center;
-        min-width: 44px;
-        height: 44px;
-        padding: 10px;
+        width: 34px;
+        height: 34px;
+        padding: 0;
         cursor: pointer;
-        background: rgba(255, 255, 255, 0.2) !important;
-        border: 2px solid rgba(255, 255, 255, 0.4) !important;
-        border-radius: 10px;
+        background: transparent !important;
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 8px;
         transition: all 0.2s ease;
       }
 
       .theme-toggle:hover {
-        background-color: rgba(255, 255, 255, 0.3) !important;
-        border-color: rgba(255, 255, 255, 0.6) !important;
+        background-color: #f8fafc !important;
+        border-color: #cbd5e1 !important;
       }
 
       .theme-toggle i,
-      .theme-toggle i.fas,
-      .theme-toggle i.fa-moon,
-      .theme-toggle i.fa-sun {
-        font-size: 1.5rem !important;
+      .theme-toggle i.fas {
+        font-size: 0.9375rem !important;
         transition: transform 0.3s ease, color 0.3s ease;
-        -webkit-text-stroke: 0;
         font-weight: 900 !important;
       }
 
-      /* Moon icon in light mode - bright white/yellow */
       .theme-toggle i.fa-moon {
-        color: #fef3c7 !important;
-        text-shadow: 0 0 8px rgba(254, 243, 199, 0.5);
+        color: #64748b !important;
       }
 
-      /* Sun icon in dark mode - bright yellow/orange */
       body.dark-mode .theme-toggle i.fa-sun {
-        color: #fbbf24 !important;
-        text-shadow: 0 0 10px rgba(251, 191, 36, 0.6);
+        color: #f59e0b !important;
       }
 
       .theme-toggle:hover i {
-        transform: scale(1.15);
+        transform: scale(1.1);
       }
 
       .mobile-nav-toggle i {
-        color: #6b7280;
+        color: var(--color-text-tertiary);
         font-size: 1rem;
       }
 
@@ -421,23 +438,17 @@
         color: #dc2626;
       }
 
-      /* Dark mode icon colors */
+      /* Dark mode — sidebar icon colors */
       body.dark-mode .nav-item a i {
         color: #9ca3af;
       }
 
       body.dark-mode .nav-item a:hover i,
       body.dark-mode .nav-item a.active i {
-        color: #60a5fa;
+        color: var(--emerald-400);
       }
 
-      body.dark-mode .search-icon {
-        color: #9ca3af;
-      }
-
-      body.dark-mode .mobile-nav-toggle i {
-        color: #9ca3af;
-      }
+      /* Header icons stay the same in dark mode (white header) */
 
       body.dark-mode .close-search i {
         color: #9ca3af;
@@ -447,7 +458,7 @@
         color: #f87171;
       }
 
-      /* Enhanced Search Results Styling */
+      /* Search result items */
       .search-item {
         padding: 1rem;
         border-bottom: 1px solid #e5e7eb;
@@ -464,37 +475,37 @@
       }
 
       .result-title {
-        font-size: 1.1rem;
+        font-size: 1rem;
         font-weight: 600;
         color: #374151;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.375rem;
         line-height: 1.4;
       }
 
       .result-excerpt {
         color: #6b7280;
-        font-size: 0.875rem;
+        font-size: 0.8125rem;
         line-height: 1.5;
         margin-bottom: 0.25rem;
       }
 
       .result-category {
         color: #059669;
-        font-size: 0.75rem;
+        font-size: 0.6875rem;
         font-weight: 500;
         text-transform: uppercase;
         letter-spacing: 0.05em;
       }
 
       mark {
-        background-color: #fef3c7;
-        color: #92400e;
+        background-color: #d1fae5;
+        color: #065f46;
         padding: 0.125rem 0.25rem;
         border-radius: 0.25rem;
         font-weight: 600;
       }
 
-      /* Dark mode search results */
+      /* Dark mode search */
       body.dark-mode .search-item {
         border-bottom-color: #374151;
       }
@@ -516,16 +527,16 @@
       }
 
       body.dark-mode mark {
-        background-color: #451a03;
-        color: #fbbf24;
+        background-color: rgba(16, 185, 129, 0.2);
+        color: #6ee7b7;
       }
 
-      /* Footer Styling - Enhanced for proper alignment */
+      /* Footer */
       .modern-footer {
         margin-top: 4rem;
-        padding: 3rem 0;
-        border-top: 1px solid #e5e7eb;
-        background-color: #f9fafb;
+        padding: 2.5rem 0;
+        border-top: 1px solid var(--color-border-primary);
+        background-color: transparent;
         width: 100% !important;
         position: relative;
         left: 0;
@@ -541,14 +552,14 @@
         flex-direction: column !important;
         align-items: center !important;
         justify-content: center !important;
-        gap: 2rem;
+        gap: 1.5rem;
         text-align: center !important;
       }
 
       .modern-footer .footer-links {
         display: flex !important;
         flex-wrap: wrap;
-        gap: 3rem;
+        gap: 2rem;
         justify-content: center !important;
         align-items: center;
         margin: 0 auto;
@@ -556,34 +567,21 @@
       }
 
       .modern-footer .footer-links a {
-        color: #6b7280;
+        color: var(--color-text-tertiary);
         text-decoration: none;
-        font-size: 0.9rem;
+        font-size: 0.8125rem;
         font-weight: 500;
         transition: color 0.2s ease;
-        position: relative;
-        display: inline-block;
-        white-space: nowrap;
       }
 
       .modern-footer .footer-links a:hover {
-        color: #2563eb;
-      }
-
-      .modern-footer .footer-links a:not(:last-child)::after {
-        content: "•";
-        position: absolute;
-        right: -1.5rem;
-        top: 50%;
-        transform: translateY(-50%);
-        color: #d1d5db;
-        font-size: 0.75rem;
+        color: var(--emerald-600);
       }
 
       .modern-footer .footer-text {
         text-align: center !important;
-        color: #6b7280;
-        font-size: 0.875rem;
+        color: var(--color-text-tertiary);
+        font-size: 0.8125rem;
         width: 100%;
         margin: 0 auto;
       }
@@ -596,34 +594,13 @@
       /* Dark mode footer */
       body.dark-mode .modern-footer {
         border-top-color: #374151;
-        background-color: #1f2937;
-      }
-
-      body.dark-mode .footer-links a {
-        color: #9ca3af;
-      }
-
-      body.dark-mode .footer-links a:hover {
-        color: #60a5fa;
-      }
-
-      body.dark-mode .modern-footer .footer-links a:not(:last-child)::after {
-        color: #4b5563;
-      }
-
-      body.dark-mode .footer-text {
-        color: #9ca3af;
       }
 
       @media (max-width: 768px) {
         .modern-footer .footer-links {
           flex-direction: column !important;
           align-items: center;
-          gap: 1rem;
-        }
-
-        .modern-footer .footer-links a:not(:last-child)::after {
-          display: none;
+          gap: 0.75rem;
         }
 
         .modern-footer .footer-content {
@@ -655,7 +632,7 @@
         left: -9999px !important;
       }
 
-      /* Override any conflicting styles from main.scss */
+      /* Override conflicting styles */
       footer.modern-footer {
         display: block !important;
         width: 100% !important;
@@ -672,20 +649,6 @@
         max-width: 1280px !important;
         margin: 0 auto !important;
         text-align: center !important;
-      }
-
-      footer.modern-footer .footer-links {
-        display: flex !important;
-        justify-content: center !important;
-        flex-wrap: wrap !important;
-        margin: 0 auto !important;
-        width: auto !important;
-      }
-
-      footer.modern-footer .footer-text {
-        width: 100% !important;
-        text-align: center !important;
-        margin: 0 !important;
       }
     </style>
 
@@ -867,6 +830,16 @@
       document.addEventListener("keydown", function (e) {
         if (e.key === "Escape") {
           searchOverlay.classList.remove("active");
+          if (searchInput) searchInput.blur();
+        }
+
+        // Ctrl+K / Cmd+K to focus search
+        if ((e.ctrlKey || e.metaKey) && e.key === "k") {
+          e.preventDefault();
+          if (searchInput) {
+            searchInput.focus();
+            searchInput.select();
+          }
         }
       });
     </script>
