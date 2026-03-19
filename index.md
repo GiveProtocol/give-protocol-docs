@@ -15,21 +15,21 @@ date: 2025-08-17
   <h2>Getting Started</h2>
   <p>New to Give Protocol? Start here:</p>
   <div class="guide-cards">
-    <a href="{{ '/introduction/what-is-give-protocol/' | relative_url }}" class="guide-card">
+    <a href="{{ '/docs/getting-started/what-is-give-protocol/' | relative_url }}" class="guide-card">
       <div class="card-icon"><i class="fas fa-circle-info"></i></div>
       <div class="card-content">
         <div class="card-title">What is Give Protocol?</div>
         <div class="card-description">Learn about our blockchain-based charitable giving platform</div>
       </div>
     </a>
-    <a href="{{ '/getting-started/creating-account/' | relative_url }}" class="guide-card">
+    <a href="{{ '/docs/getting-started/creating-account/' | relative_url }}" class="guide-card">
       <div class="card-icon"><i class="fas fa-user-plus"></i></div>
       <div class="card-content">
         <div class="card-title">Creating Your Account</div>
         <div class="card-description">Step-by-step guide to joining Give Protocol</div>
       </div>
     </a>
-    <a href="{{ '/getting-started/wallet-connection/' | relative_url }}" class="guide-card">
+    <a href="{{ '/docs/getting-started/wallet-connection/' | relative_url }}" class="guide-card">
       <div class="card-icon"><i class="fas fa-wallet"></i></div>
       <div class="card-content">
         <div class="card-title">Connecting Your Wallet</div>
@@ -42,21 +42,21 @@ date: 2025-08-17
 <div class="content-section">
   <h2>Popular Topics</h2>
   <div class="guide-cards">
-    <a href="{{ '/user-guides/donors/' | relative_url }}" class="guide-card">
+    <a href="{{ '/docs/donors/' | relative_url }}" class="guide-card">
       <div class="card-icon"><i class="fas fa-heart"></i></div>
       <div class="card-content">
         <div class="card-title">For Donors</div>
         <div class="card-description">Make donations, track impact, and manage fees</div>
       </div>
     </a>
-    <a href="{{ '/user-guides/organizations/' | relative_url }}" class="guide-card">
+    <a href="{{ '/docs/organizations/' | relative_url }}" class="guide-card">
       <div class="card-icon"><i class="fas fa-building"></i></div>
       <div class="card-content">
         <div class="card-title">For Organizations</div>
         <div class="card-description">Get verified, manage your profile, and best practices</div>
       </div>
     </a>
-    <a href="{{ '/user-guides/volunteers/' | relative_url }}" class="guide-card">
+    <a href="{{ '/docs/volunteers/' | relative_url }}" class="guide-card">
       <div class="card-icon"><i class="fas fa-hands-helping"></i></div>
       <div class="card-content">
         <div class="card-title">For Volunteers</div>
