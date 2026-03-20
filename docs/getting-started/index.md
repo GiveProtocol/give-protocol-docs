@@ -1,64 +1,67 @@
 ---
 title: Getting Started
-description: Learn the basics of Give Protocol - create your account, connect your wallet, and start making an impact
+description: Everything you need to start using Give Protocol — from creating your account to making your first donation.
 permalink: /docs/getting-started/
 ---
 
-Welcome to Give Protocol! This guide will help you get up and running quickly so you can start making a difference through blockchain-powered charitable giving.
+# Getting Started
 
-## Quick Start Guide
+Give Protocol is a philanthropic platform that lets you donate to verified charities using cryptocurrency or traditional payment methods, contribute to sustainable endowment funds, and earn verifiable volunteer credentials — all with complete transparency, blockchain traceability and minimal platform fees.
 
-<div class="getting-started-steps">
+Whether you're a donor looking to support causes you care about, a charitable organization seeking new funding channels, or a volunteer wanting verifiable recognition for your service, this guide will walk you through everything you need to get started.
 
-### 1. Create Your Account
+---
 
-Set up your Give Protocol account in minutes. Choose whether you're joining as a donor, organization, or volunteer.
+## Choose Your Path
 
-[Create Your Account](/docs/getting-started/creating-account/){: .btn-primary}
-
-### 2. Set Up Your Profile
-
-Complete your profile to unlock all platform features and help others learn about you.
-
-[Set Up Your Profile](/docs/getting-started/setting-up-profile/){: .btn-secondary}
-
-### 3. Connect Your Wallet
-
-Link your cryptocurrency wallet to make donations or receive funds securely.
-
-[Wallet Connection Guide](/docs/getting-started/wallet-connection/){: .btn-secondary}
-
-### 4. Take Your First Steps
-
-Follow our walkthrough to make your first donation or find your first volunteer opportunity.
-
-[First Steps Walkthrough](/docs/getting-started/first-steps/){: .btn-secondary}
-
-### 5. Explore Your Dashboard
-
-Learn how to navigate your personalized dashboard and track your charitable activities.
-
-[Dashboard Overview](/docs/getting-started/dashboard/){: .btn-secondary}
-
+<div class="guide-cards">
+  <div class="guide-card">
+    <div class="card-icon"><i class="fas fa-heart"></i></div>
+    <div class="card-content">
+      <div class="card-title">I want to donate to charity</div>
+      <div class="card-description">
+        Start with <a href="/docs/getting-started/creating-account/">Creating an Account</a>, then head to <a href="/docs/getting-started/first-steps/">First Steps</a> to learn how to browse charities and make your first donation. You can give by card or crypto — no wallet required to get started.
+      </div>
+    </div>
+  </div>
+  <div class="guide-card">
+    <div class="card-icon"><i class="fas fa-building"></i></div>
+    <div class="card-content">
+      <div class="card-title">I represent a charitable organization</div>
+      <div class="card-description">
+        Begin with <a href="/docs/getting-started/creating-account/">Creating an Account</a> and select the Charity role during signup. Then visit <a href="/docs/getting-started/setting-up-profile/">Setting Up Your Profile</a> to learn how to claim your organization's profile, connect a receiving wallet, and start accepting donations.
+      </div>
+    </div>
+  </div>
+  <div class="guide-card">
+    <div class="card-icon"><i class="fas fa-hands-helping"></i></div>
+    <div class="card-content">
+      <div class="card-title">I want to volunteer</div>
+      <div class="card-description">
+        Create your account following the <a href="/docs/getting-started/creating-account/">Creating an Account</a> guide, then check out <a href="/docs/getting-started/first-steps/">First Steps</a> to explore volunteer opportunities and learn how Give Protocol's credential system works.
+      </div>
+    </div>
+  </div>
 </div>
 
-## What is Give Protocol?
+---
 
-Give Protocol is a blockchain-based charitable giving platform that connects donors with verified nonprofit organizations and volunteers. We use cryptocurrency technology to ensure:
+## What You'll Learn
 
-- **Transparency**: Every transaction is recorded on the blockchain
-- **Security**: Smart contracts protect both donors and organizations
-- **Efficiency**: Lower fees mean more of your donation reaches those in need
-- **Impact Tracking**: See exactly how your contributions make a difference
+- [What Is Give Protocol](/docs/getting-started/what-is-give-protocol/) — How the platform works, what makes it different, and the technology behind it.
+- [Creating an Account](/docs/getting-started/creating-account/) — Sign up with email or connect a crypto wallet. Both paths lead to the same experience.
+- [Setting Up Your Profile](/docs/getting-started/setting-up-profile/) — Complete your donor or charity profile and configure your preferences.
+- [Wallet Connection](/docs/getting-started/wallet-connection/) — Learn about crypto wallets, how to connect one, and why it's optional.
+- [First Steps](/docs/getting-started/first-steps/) — Make your first donation, explore charities, and discover what you can do on the platform.
+- [Dashboard](/docs/getting-started/dashboard/) — Navigate your personal dashboard to track donations, manage settings, and more.
+- [How To Join](/docs/getting-started/how-to-join/) — A quick summary for charities and organizations that want to join the platform.
 
-[Learn more about Give Protocol](/docs/getting-started/what-is-give-protocol/){: .learn-more}
+---
 
-## Guides in This Section
+## Quick Facts
 
-{% for item in site.data.navigation.sections[0].items %}
-- [{{ item.title }}]({{ item.url | relative_url }})
-{% endfor %}
-
-## Need Help?
-
-If you run into any issues while getting started, check our [Troubleshooting guide](/docs/troubleshooting/) or [contact support](/docs/support/).
+- **No wallet required.** You can donate by card (USD via Helcim, international currencies via PayPal) without ever touching cryptocurrency.
+- **Minimal platform fees.** Give Protocol charges just 0.5% on direct donations and 1% on portfolio funds — significantly less than the 3–5% charged by most traditional platforms. Donors also pay standard gas fees (crypto) or payment processor fees (fiat).
+- **Multi-chain support.** Crypto donations are supported on Moonbeam, Base, and Optimism, with more networks coming.
+- **Open source.** Give Protocol's code is publicly available and community-driven.
+- **Nonprofit.** Give Protocol Foundation is a Delaware-incorporated 501(c)(3) organization.
