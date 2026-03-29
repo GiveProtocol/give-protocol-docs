@@ -1,71 +1,102 @@
 ---
-layout: modern
-title: "Setting Up Your Profile"
-description: "Complete guide to setting up your Give Protocol profile for donors, organizations, and volunteers"
+title: Setting Up Your Profile
+description: How to complete your donor or charity profile on Give Protocol, including wallet linking, payment setup, and profile customization.
 permalink: /docs/getting-started/setting-up-profile/
 ---
 
 # Setting Up Your Profile
 
-Learn how to create and customize your Give Protocol profile to maximize your impact and connect with the community.
+After creating your account, the next step is completing your profile. What this looks like depends on whether you're a donor or a charity representative.
 
-## Profile Types
+## Donor Profile Setup
 
-Give Protocol supports three types of profiles:
+Your donor profile is straightforward. Most of it is optional, and you can update it anytime from your dashboard settings.
 
-### Donor Profiles
+### Basic Information
 
-- Personal information and giving preferences
-- Donation history and impact tracking
-- Cause and organization preferences
-- Tax documentation settings
+From your dashboard, navigate to **Settings** to update:
 
-### Organization Profiles
+- **Display name** — How you appear on the platform. You can use your real name or remain pseudonymous.
+- **Email** — Your primary contact email (set during account creation).
+- **Notification preferences** — Choose what updates you'd like to receive.
 
-- Mission statement and impact metrics
-- Verification documentation
-- Fundraising goals and campaigns
-- Transparency and reporting tools
+### Linking a Wallet (Optional)
 
-### Volunteer Profiles
+If you signed up with email and want to add crypto donation capability:
 
-- Skills and availability
-- Experience and certifications
-- Volunteer history and achievements
-- Recognition and badges
+1. Go to **Settings → Wallet**.
+2. Click **Link a Wallet**.
+3. Your browser wallet (MetaMask, Coinbase Wallet, etc.) will prompt you to sign a message. This is free — it's not a transaction.
+4. Once signed, your wallet address is linked to your account.
 
-## Getting Started
+Linking a wallet lets you make crypto donations, view your on-chain donation history, and earn blockchain-verified credentials (SBTs). You can unlink a wallet later if needed.
 
-1. **Complete Basic Information**
+If you signed up with a wallet and want to add email/password for recovery, you can do that from the same settings page.
 
-   - Add your name and profile photo
-   - Write a brief bio or mission statement
-   - Set your location and contact preferences
+### Tax Receipts
 
-2. **Verify Your Identity**
+Give Protocol generates donation receipts that include the Foundation's details and your donation amount. You can access these from your donation history in the dashboard.
 
-   - Upload required verification documents
-   - Complete phone or email verification
-   - Submit any additional certifications
+**Important:** Give Protocol Foundation's 501(c)(3) status is currently pending IRS review. Until the determination letter is received, receipts will include conditional deductibility language. This does not affect the donation itself — only the tax treatment.
 
-3. **Customize Your Preferences**
+## Charity Profile Setup
 
-   - Choose causes you care about
-   - Set donation or volunteer preferences
-   - Configure privacy and notification settings
+Setting up a charity profile involves more steps, since the platform needs to verify your organization's identity before unlocking full features.
 
-4. **Connect Your Wallet**
-   - Link your cryptocurrency wallet
-   - Set up payment methods
-   - Configure security settings
+### Understanding Profile States
 
-## Best Practices
+Every charity on Give Protocol exists in one of three states:
 
-- Keep your profile information up to date
-- Use a clear, professional profile photo
-- Write a compelling description of your mission
-- Regularly update your achievements and impact
+- **Unclaimed** — The profile was auto-populated from official national charity register data. It shows public information (name, registration number, classification, location) but is not yet managed by the organization. Donations to unclaimed profiles are held in escrow.
+- **Claimed-Pending** — The organization has submitted a claim and verification is in progress. Escrowed donations continue to be held until verification completes.
+- **Verified** — The organization's identity is confirmed. Full features are unlocked, including direct donations, CEF vaults, and volunteer credential management.
 
-## Need Help?
+### The Claim Process
 
-Visit our [Support Center](/docs/support/) for additional support or email us at support@giveprotocol.org.
+If your organization already has an unclaimed profile on Give Protocol (populated from your country's official charity register), claiming it is a two-step process:
+
+**Step 1 — Verify Identity**
+- Confirm your organization's registration number (e.g., EIN for US entities).
+- Provide your name, title, and official email address as an authorized representative.
+- The platform checks your email domain against the organization's publicly listed website as a guardrail.
+- A verification link is sent to your email (valid for 24 hours).
+
+**Step 2 — Confirm Profile**
+- Review the register-sourced information on your profile.
+- Edit your mission statement to better represent your organization.
+- Upload your logo.
+- Confirm and submit.
+
+Wallet setup is intentionally not part of the claim flow. Identity verification and payment method configuration are separate tasks.
+
+### Post-Claim Onboarding Checklist
+
+After your claim is verified, your charity dashboard will show an onboarding checklist:
+
+- ✅ **Identity verified** — Completed during the claim process.
+- ⬜ **Add receiving wallet** — Connect an organizational crypto wallet to receive crypto donations. This should be your organization's dedicated wallet, not a personal wallet.
+- ⬜ **Connect bank account via Helcim** — Required to receive fiat (USD) donations via direct bank transfer.
+- ⬜ **Complete profile** — Add additional details, photos, and program descriptions to help donors understand your work.
+
+Escrowed donations (from donors who gave while your profile was unclaimed) are released once you connect at least one payment method.
+
+### Important: Wallet Separation
+
+Give Protocol enforces a strict separation between personal wallets and organizational wallets. When you're logged into a charity account:
+
+- The wallet-link toggle from the donor signup flow does not appear.
+- If you have a personal wallet connected in your browser, the navbar will show it labeled as "Personal wallet — not linked to org accounts."
+- Your organization's receiving wallet is configured separately through the charity dashboard.
+
+This separation protects both the organization's governance structure and the individual's personal privacy.
+
+### Customizing Your Charity Profile
+
+Once verified, you can enhance your profile with:
+
+- **Mission statement** — Editable text that appears on your public profile page.
+- **Logo** — Uploaded via the charity dashboard; stored in the platform's asset system.
+- **Website and social links** — Help donors learn more about your work.
+- **Cause categories** — Tags that help donors discover your organization through search and browsing.
+
+The core data from the official charity register (name, registration number, classification, location, tax status) remains visible and cannot be edited — this ensures donors can always see the verified source information.

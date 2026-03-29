@@ -1,256 +1,108 @@
 ---
 title: Wallet Connection
-description: Complete guide to connecting your cryptocurrency wallet to Give Protocol
+description: What crypto wallets are, which ones work with Give Protocol, how to connect one, and why it's entirely optional.
 permalink: /docs/getting-started/wallet-connection/
 ---
 
-Connecting your cryptocurrency wallet is essential for using Give Protocol. This guide covers everything you need to know about wallet connection, from setup to security best practices.
+# Wallet Connection
 
-## Why Connect a Wallet?
+A crypto wallet is a piece of software that lets you hold, send, and receive cryptocurrency. On Give Protocol, connecting a wallet lets you make crypto donations, view on-chain transaction history, and earn blockchain-verified credentials. But it's entirely optional — you can use Give Protocol fully through fiat donations without ever connecting a wallet.
 
-Your wallet connection enables you to:
+## Do I Need a Wallet?
 
-- **Make Donations**: Send cryptocurrency to organizations
-- **Receive Funds**: Organizations can receive donations
-- **Track Transactions**: View your giving history on-chain
-- **Manage Assets**: Control your cryptocurrency holdings
-- **Identity Verification**: Prove ownership of your address
+**No.** You can create an account with just an email address and donate using a credit card, debit card, or bank transfer through our fiat payment processors (Helcim for USD, PayPal for international currencies). Many donors use Give Protocol this way.
+
+A wallet becomes useful if you want to:
+
+- Donate cryptocurrency (ETH, GLMR, USDC, DAI, and other supported tokens)
+- See your donation history verified on a public blockchain
+- Earn non-transferable Soul-Bound Token (SBT) credentials for donations or volunteer work
+- Participate in governance proposals (future feature)
+
+You can always add a wallet later from your dashboard — there's no pressure to set one up during account creation.
 
 ## Supported Wallets
 
-Give Protocol supports all major Web3 wallets:
+Give Protocol supports EVM-compatible browser wallets, including:
 
-### Browser Extension Wallets
+- **MetaMask** — The most widely used browser wallet. Available as a Chrome, Firefox, Brave, and Edge extension, and as a mobile app.
+- **Coinbase Wallet** — A self-custody wallet from Coinbase (separate from the Coinbase exchange app). Available as a browser extension and mobile app.
+- **WalletConnect** — A protocol that connects many different wallet apps to web applications by scanning a QR code.
 
-- **MetaMask** (Recommended) - Most popular and user-friendly
-- **Coinbase Wallet** - Great for beginners
-- **Brave Wallet** - Built into Brave browser
-- **Rabby Wallet** - Advanced features for power users
+If you have another EVM-compatible wallet that supports WalletConnect, it should work with Give Protocol.
 
-### Mobile Wallets
+## Supported Networks
 
-- **MetaMask Mobile** - iOS and Android
-- **Trust Wallet** - Multi-chain support
-- **Rainbow Wallet** - Ethereum-focused
-- **Coinbase Wallet** - iOS and Android
+Give Protocol operates on multiple blockchain networks. When you connect your wallet, you can switch between:
 
-### WalletConnect Compatible
+| Network | Native Token | Status |
+|---------|-------------|--------|
+| Moonbeam | GLMR | Live |
+| Base | ETH | Live |
+| Optimism | ETH | Live |
+| Solana | SOL | Planned |
+| Arbitrum | ETH | Planned |
 
-- **Ledger Live** - Hardware wallet support
-- **Trezor Suite** - Hardware wallet support
-- **imToken** - Popular in Asia
-- **TokenPocket** - Multi-chain wallet
+When you make a donation, the platform shows only the tokens available on your currently connected network. If you need to switch networks, Give Protocol will prompt your wallet to do so automatically.
 
-## Setting Up MetaMask (Recommended)
+## How to Connect a Wallet
 
-If you don't have a wallet yet, we recommend starting with MetaMask:
+### If You Already Have a Wallet
 
-### Step 1: Install MetaMask
+1. Make sure your wallet extension (MetaMask, Coinbase Wallet, etc.) is installed and unlocked in your browser.
+2. On Give Protocol, click the **Connect Wallet** button in the navigation bar, or go to **Dashboard → Settings → Wallet**.
+3. Select your wallet from the list of detected options.
+4. Your wallet will ask you to approve the connection. This simply allows the site to see your public address — it does not give Give Protocol access to your funds.
+5. You may also be asked to sign a message to verify ownership. This is a free signature, not a transaction — it will not cost gas or move any funds.
 
-1. Visit [metamask.io](https://metamask.io)
-2. Click "Download" and select your browser
-3. Install the extension
-4. Pin it to your browser toolbar
+### If You Don't Have a Wallet Yet
 
-### Step 2: Create Your Wallet
+If you'd like to start using crypto donations, here's how to set up MetaMask (the most common option):
 
-1. Click "Get Started"
-2. Choose "Create a Wallet"
-3. Create a strong password
-4. **IMPORTANT**: Write down your recovery phrase
-5. Store it securely offline
-6. Confirm your recovery phrase
+1. Visit [metamask.io](https://metamask.io) and install the browser extension for your browser.
+2. Follow MetaMask's setup wizard to create a new wallet. You'll be given a **seed phrase** (12 or 24 words) — write this down on paper and store it somewhere safe. This is your only backup if you lose access to your wallet. Never share it with anyone.
+3. Once your wallet is set up, return to Give Protocol and connect it using the steps above.
 
-### Step 3: Add Networks
+To add one of Give Protocol's supported networks to MetaMask:
 
-Give Protocol supports multiple networks. Add them to MetaMask:
+1. Visit [chainlist.org](https://chainlist.org).
+2. Search for the network you want (e.g., "Moonbeam," "Base," or "Optimism").
+3. Click **Add to Wallet** and approve the network addition in MetaMask.
 
-#### Polygon Network (Recommended for lower fees)
+Or, when you attempt to donate on a specific chain through Give Protocol, the platform will prompt MetaMask to add and switch to the correct network automatically.
 
-- **Network Name**: Polygon Mainnet
-- **RPC URL**: https://polygon-rpc.com
-- **Chain ID**: 137
-- **Symbol**: MATIC
-- **Block Explorer**: https://polygonscan.com
+## Linking a Wallet to an Existing Account
 
-#### Ethereum Mainnet (Already included)
+If you created your account with email and want to add a wallet later:
 
-Ethereum is included by default in MetaMask.
+1. Go to **Dashboard → Settings → Wallet**.
+2. Click **Link a Wallet**.
+3. Connect your wallet and sign the verification message.
+4. Your wallet is now linked to your account. Future visits let you sign in with either email or wallet — both resolve to the same dashboard and history.
 
-## Connecting Your Wallet to Give Protocol
+A wallet can only be linked to one account. If the wallet is already linked to a different account, you'll see an error.
 
-### Step 1: Visit Give Protocol
+## Unlinking a Wallet
 
-1. Go to [giveprotocol.org](https://giveprotocol.org)
-2. Click "Connect Wallet" in the top right
-3. Select your wallet from the list
+If you need to disconnect your wallet:
 
-### Step 2: Authorize Connection
+1. Go to **Dashboard → Settings → Wallet**.
+2. Click **Unlink Wallet** next to your linked address.
+3. Confirm the action.
 
-1. Your wallet will open automatically
-2. Review the connection request
-3. Click "Connect" or "Approve"
-4. Select which accounts to connect
+Unlinking a wallet does not affect any donations you've already made — those transactions are permanently recorded on the blockchain. It simply removes the association between that wallet address and your Give Protocol account.
 
-### Step 3: Sign Message
+## For Charities: Organizational Wallets
 
-1. Give Protocol will request a signature
-2. This verifies you own the wallet
-3. Click "Sign" in your wallet
-4. No gas fees for signing
+If you manage a charity account, the wallet setup process is different. Personal wallets are not linked to charity accounts during signup. Instead, your organization's receiving wallet is configured through the charity dashboard's onboarding checklist after your identity is verified.
 
-### Step 4: Choose Network
+Your organization's receiving wallet should be a dedicated organizational wallet — ideally a multi-signature wallet — not a personal wallet belonging to any individual staff member. This is important for governance, security, and compliance.
 
-1. Select your preferred network:
-   - **Polygon**: Lower fees, faster transactions
-   - **Ethereum**: Higher security, higher fees
-2. Switch networks in your wallet if needed
+For more details, see [Setting Up Your Profile](/docs/getting-started/setting-up-profile/).
 
-## Wallet Security Best Practices
+## Security Reminders
 
-### Seed Phrase Security
-
-- **Write it down**: Never store digitally
-- **Multiple copies**: Store in different secure locations
-- **Never share**: Give Protocol will never ask for your seed phrase
-- **Test recovery**: Practice restoring your wallet
-
-### Password Protection
-
-- **Strong passwords**: Use unique, complex passwords
-- **Auto-lock**: Set wallet to lock when inactive
-- **Two-factor**: Enable 2FA where available
-- **Regular updates**: Keep wallet software updated
-
-### Transaction Safety
-
-- **Double-check addresses**: Always verify recipient
-- **Start small**: Test with small amounts first
-- **Network verification**: Ensure you're on the correct network
-- **Gas limits**: Don't set gas too low
-
-## Managing Multiple Wallets
-
-You can connect multiple wallets to your Give Protocol account:
-
-1. **Primary Wallet**: Your main wallet for transactions
-2. **Secondary Wallets**: Additional wallets for specific purposes
-3. **Cold Storage**: Connect view-only for tracking
-4. **Multi-sig**: Team wallets for organizations
-
-### Adding Additional Wallets
-
-1. Go to **Settings** → **Wallets**
-2. Click "Add Wallet"
-3. Follow the connection process
-4. Label each wallet for easy identification
-
-## Troubleshooting Common Issues
-
-### Wallet Won't Connect
-
-1. **Refresh the page** and try again
-2. **Check wallet is unlocked** and on correct network
-3. **Clear browser cache** and cookies
-4. **Disable other wallet extensions** temporarily
-5. **Try incognito/private browsing** mode
-
-### Wrong Network
-
-1. **Check network in wallet** matches Give Protocol
-2. **Switch networks** in your wallet
-3. **Add custom networks** if missing
-4. **Refresh the page** after switching
-
-### Transaction Stuck
-
-1. **Check network congestion** on block explorers
-2. **Increase gas price** for faster confirmation
-3. **Wait for congestion to clear**
-4. **Cancel and retry** if possible
-
-### Insufficient Funds
-
-1. **Check gas token balance** (ETH/MATIC)
-2. **Get gas tokens** from exchanges
-3. **Use faucets** for testnets
-4. **Switch to lower-fee network**
-
-## Network Fees and Gas
-
-### Understanding Gas
-
-- **Gas**: Unit of computational work
-- **Gas Price**: Cost per unit of gas
-- **Gas Limit**: Maximum gas for transaction
-- **Total Fee**: Gas Used × Gas Price
-
-### Fee Comparison
-
-| Network  | Typical Fee | Speed    | Best For        |
-| -------- | ----------- | -------- | --------------- |
-| Polygon  | $0.01-0.10  | Fast     | Small donations |
-| Ethereum | $5-50       | Variable | Large donations |
-
-### Reducing Fees
-
-- **Use Polygon** for lower fees
-- **Time transactions** during low congestion
-- **Batch transactions** when possible
-- **Adjust gas price** based on urgency
-
-## Advanced Features
-
-### Hardware Wallet Integration
-
-For maximum security, use hardware wallets:
-
-1. **Ledger**: Connect via Ledger Live
-2. **Trezor**: Use Trezor Suite
-3. **WalletConnect**: Bridge to hardware wallets
-4. **Confirmation**: Always verify on device screen
-
-### Multi-Signature Wallets
-
-For organizations requiring multiple approvals:
-
-1. **Gnosis Safe**: Popular multi-sig solution
-2. **Setup**: Define signers and threshold
-3. **Integration**: Connect via WalletConnect
-4. **Governance**: Manage permissions
-
-## Wallet Backup and Recovery
-
-### Before You Need It
-
-- **Backup seed phrase** in multiple secure locations
-- **Test recovery process** with small amounts
-- **Document wallet addresses** and labels
-- **Keep software updated**
-
-### If You Lose Access
-
-1. **Don't panic** - funds are safe with seed phrase
-2. **Install wallet** on new device
-3. **Import using seed phrase**
-4. **Re-add custom networks** and tokens
-5. **Update connected apps**
-
-## Need Help?
-
-If you're having trouble with wallet connection:
-
-- **Check our [Troubleshooting Guide](/docs/troubleshooting/wallet-transactions/)** for common issues
-- **Visit [Support Center](/docs/support/)** for help
-- **Contact support** at support@giveprotocol.org
-
-## Next Steps
-
-Once your wallet is connected:
-
-1. **[Explore the Dashboard](/docs/getting-started/dashboard/)** - Learn the interface
-2. **[Make Your First Donation](/docs/getting-started/first-steps/)** - Start giving
-3. **[Browse Verified Organizations](/docs/organizations/)** - Find causes
-4. **[Understand Fees](/docs/technical/fees/)** - Know the costs
-
-Remember: Your wallet is your responsibility. Keep it secure, backup your seed phrase, and never share your private keys with anyone.
+- **Never share your seed phrase or private keys.** Give Protocol will never ask for them.
+- **Signing a message is free.** If your wallet asks you to approve a transaction with a gas fee during login or account linking, stop and verify you're on the real giveprotocol.io website.
+- **Use a hardware wallet for large holdings.** If you hold significant crypto assets, consider using a hardware wallet (Ledger, Trezor) for an extra layer of security.
+- **Verify the URL.** Always make sure you're on `giveprotocol.io` before connecting your wallet. Phishing sites may mimic the interface to steal wallet connections.

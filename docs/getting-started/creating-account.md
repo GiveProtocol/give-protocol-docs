@@ -1,132 +1,80 @@
 ---
-title: Creating Account
-description: Step-by-step guide to creating your Give Protocol account
+title: Creating an Account
+description: How to create a Give Protocol account using email, wallet, or both — for donors and charitable organizations.
 permalink: /docs/getting-started/creating-account/
 ---
 
-Welcome to Give Protocol! Creating an account is your first step towards making a difference in the world of charitable giving. This guide will walk you through the entire process.
+# Creating an Account
 
-## Before You Begin
+Give Protocol uses a unified identity system. Whether you sign up with an email address or a crypto wallet, you end up with the same account and the same dashboard. You can always add the other method later.
 
-### Requirements
+## Before You Start
 
-- A valid email address
-- Access to a Web3 wallet (we'll help you set one up if needed)
-- Basic personal information
-- 5-10 minutes of your time
+You'll need one of the following:
 
-### Account Types
+- **An email address** — for email/password signup. This is the simplest path and doesn't require any crypto knowledge.
+- **A crypto wallet** — such as MetaMask or Coinbase Wallet. If you already have one connected in your browser, Give Protocol will detect it automatically.
 
-Give Protocol offers three types of accounts:
+You don't need both. Donors who want to give by card can sign up with just an email. Donors who prefer crypto can sign up with just a wallet. You can link the other method from your dashboard at any time.
 
-1. **Donor Account** - For individuals who want to make donations
-2. **Organization Account** - For charities and non-profits
-3. **Volunteer Account** - For individuals offering their time and skills
+## Creating a Donor Account
 
-_Note: You can upgrade or switch account types later if needed._
+### Sign Up with Email
 
-## Step-by-Step Registration
+1. Visit [giveprotocol.io](https://giveprotocol.io) and click **Create Account**.
+2. Make sure the **Donor** tab is selected at the top of the form.
+3. Enter your email address and choose a password.
+4. If a crypto wallet is detected in your browser, you'll see a toggle to link it to your account. This is optional but recommended — it lets you make crypto donations and view on-chain history tied to your account.
+5. Click **Create Donor Account**.
+6. Check your email to confirm your address. Once confirmed, you're in.
 
-### Step 1: Visit Give Protocol
+### Sign Up with Wallet
 
-1. Navigate to [https://giveprotocol.org](https://giveprotocol.org)
-2. Click the **"Sign Up"** button in the top right corner
-3. You'll be redirected to the registration page
+1. Visit [giveprotocol.io](https://giveprotocol.io) and click **Create Account**.
+2. Click **Connect Wallet** (or if your wallet is already connected, it will be detected).
+3. Your wallet app will ask you to sign a message to prove you own the address. This is a signature only — it does not cost anything and does not initiate a transaction.
+4. Your account is created and linked to your wallet address. You'll be taken to your dashboard.
+5. You can optionally add an email address later from your dashboard settings for account recovery and notifications.
 
-### Step 2: Choose Your Account Type
+### No Wallet? No Problem
 
-**Donor Account** - Perfect for individuals wanting to donate, corporate donors, and foundation representatives.
+If you don't have a crypto wallet and aren't sure what one is, that's perfectly fine. You can create an account with just your email, donate by card through our fiat payment processors (Helcim for USD, PayPal for international currencies), and explore the platform fully. If you decide to try crypto donations later, you can connect a wallet from your dashboard at any time. See the [Wallet Connection](/docs/getting-started/wallet-connection/) guide for more details.
 
-**Organization Account** - Perfect for registered charities, non-profit organizations, and community groups.
+## Creating a Charity Account
 
-**Volunteer Account** - Perfect for individuals offering time, skilled professionals, and remote volunteers.
+If you represent a charitable organization, the signup process starts the same way but includes additional steps to verify your organization's identity.
 
-### Step 3: Enter Basic Information
+### Step 1: Create Your Account
 
-#### For All Account Types
+1. Visit [giveprotocol.io](https://giveprotocol.io) and click **Create Account**.
+2. Select the **Charity** tab at the top of the form.
+3. Enter your email address and password. Use your official organizational email if possible — this helps during the verification process.
+4. Note: the wallet-linking toggle does not appear on the Charity tab. Organizational crypto wallets are configured separately after your account is created, through your charity dashboard. This keeps personal wallets separate from organizational funds.
+5. Click **Create Charity Account**.
 
-- **Email Address**: Your primary contact email
-- **Password**: Minimum 8 characters with uppercase, lowercase, number, and special character
-- **Display Name**: How you want to appear on the platform
-- **Country**: Your country of residence
+### Step 2: Claim Your Organization's Profile
 
-#### Additional for Organizations
+Many charitable organizations already have a profile on Give Protocol, auto-populated from official national charity register data (such as the IRS Exempt Organizations dataset in the US). After creating your account:
 
-- **Organization Name**: Legal registered name
-- **Registration Number**: Charity/Non-profit number
-- **Website**: Your organization's website (optional)
-- **Mission Statement**: Brief description of your cause
+1. Search for your organization by name or registration number (e.g., EIN for US organizations).
+2. If your organization appears, click **Claim Profile** and follow the verification steps — you'll need to confirm your registration number, provide your name and title as an authorized representative, and verify via your official organizational email.
+3. If your organization doesn't appear, you can request to be added through the platform.
 
-### Step 4: Verify Your Email
+For the full walkthrough, see [How To Join](/docs/getting-started/how-to-join/).
 
-1. Check your inbox for a verification email from Give Protocol
-2. Click the verification link (valid for 24 hours)
-3. If you don't see the email, check your spam folder or request a new one
+## What Happens After Signup
 
-### Step 5: Complete Your Profile
+Once your account is created, you'll land on your [Dashboard](/docs/getting-started/dashboard/). From there you can:
 
-- **Profile Picture**: Upload a photo or logo
-- **Bio/Description**: Tell others about yourself or your organization
-- **Social Links**: Connect your social media (optional)
-- **Interests**: Select causes you care about
+- Browse and search for charities
+- Make your first donation (by card or crypto)
+- Complete your profile
+- Connect or link a wallet (if you haven't already)
+- For charities: complete the post-claim onboarding checklist
 
-### Step 6: Connect Your Wallet
+## Account Security Tips
 
-This step is essential for making or receiving donations. See our [Wallet Connection Guide](/docs/getting-started/wallet-connection/) for detailed instructions.
-
-## Account Security
-
-### Enable Two-Factor Authentication (2FA)
-
-We strongly recommend enabling 2FA:
-
-1. Go to **Settings** → **Security**
-2. Click **"Enable 2FA"**
-3. Choose your preferred method (Authenticator App recommended)
-4. Follow the setup instructions
-5. Save your backup codes securely
-
-## Organization Verification
-
-If you created an organization account:
-
-1. **Submit Documentation**: Proof of charitable status, government registration, tax-exempt certificate
-2. **Verification Process**: 2-3 business days for initial review
-3. **Benefits**: Accept donations, issue tax receipts, enhanced visibility
-
-## Account Features by Type
-
-### Donor Account
-
-- Browse verified organizations
-- Make donations
-- Track donation history
-- Download tax receipts
-
-### Organization Account
-
-- Create fundraising campaigns
-- Accept cryptocurrency donations
-- Issue tax receipts
-- Manage volunteer opportunities
-
-### Volunteer Account
-
-- Browse volunteer opportunities
-- Track volunteer hours
-- Build skill portfolio
-- Connect with organizations
-
-## Next Steps
-
-1. **[Connect Your Wallet](/docs/getting-started/wallet-connection/)** - Essential for donations
-2. **[Explore the Dashboard](/docs/getting-started/dashboard/)** - Learn your way around
-3. **[Make Your First Donation](/docs/getting-started/first-steps/)** - Start making an impact
-
-## Need Help?
-
-- Visit our [Support Center](/docs/support/)
-- Check the [Troubleshooting Guide](/docs/troubleshooting/)
-- Contact support at <support@giveprotocol.org>
-
-Your privacy is important to us. We collect only necessary information, encrypt your data, and never share personal information without consent.
+- **Use a strong, unique password** for your email-based account.
+- **Never share your wallet seed phrase or private keys** with anyone. Give Protocol will never ask for them.
+- **The wallet signature during signup is free.** It's a proof-of-ownership message, not a transaction. If your wallet asks you to approve a transaction with a gas fee during signup, something is wrong — do not proceed.
+- **You can use both email and wallet** for added flexibility. If you lose access to one, the other can still get you into your account.

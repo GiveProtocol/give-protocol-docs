@@ -1,296 +1,107 @@
 ---
 title: How To Join
-description: Complete guide to joining Give Protocol and starting your charitable giving journey
+description: A guide for charitable organizations that want to join Give Protocol, claim their profile, and start receiving donations.
 permalink: /docs/getting-started/how-to-join/
 ---
 
-Welcome to Give Protocol! Join thousands of volunteers and donors who are making a real difference in their communities and around the world. This guide will walk you through everything you need to know to get started.
+# How To Join
 
-## Getting Started
+This guide is for charitable organizations that want to join Give Protocol to receive crypto and fiat donations, access sustainable funding through Charitable Equity Funds, and issue verifiable volunteer credentials.
 
-### Create Your Account
+## Who Can Join
 
-#### Sign Up Process
+Give Protocol is designed for registered charitable organizations verified through official national charity registers. Currently supported:
 
-1. **Visit Give Protocol**
+- **United States** — 501(c)(3) tax-exempt organizations listed in the IRS Exempt Organizations dataset (Deductibility Code 1).
 
-   - Go to [giveprotocol.org](https://giveprotocol.org)
-   - Click "Sign Up" or "Get Started"
-   - Choose your account type
+Planned expansion includes organizations registered with the Charity Commission for England & Wales (UK), Canada Revenue Agency (Canada), SAT donatarias autorizadas (Mexico), ACNC (Australia), NGO Darpan / Income Tax 80G (India), Commissioner of Charities (Singapore), and other official registers.
 
-2. **Choose Account Type**
+If your organization is registered in a jurisdiction not yet integrated, you can contact Give Protocol to discuss manual verification options, including equivalency determination for international organizations.
 
-   - **Individual**: Personal volunteer and donor account
-   - **Organization**: Nonprofit organization account
-   - **Corporate**: Business account for employee engagement
-   - **Educational**: School or university account
+## Check If You Already Have a Profile
 
-3. **Provide Basic Information**
+Many organizations already have a profile on Give Protocol, auto-populated from official register data. To check:
 
-   - Full name
-   - Email address
-   - Phone number (optional)
-   - Password (secure and unique)
-   - Location (city, state/province, country)
+1. Visit [giveprotocol.io](https://giveprotocol.io) and use the charity search bar.
+2. Search by your organization's name or registration number (e.g., EIN for US organizations).
+3. If your organization appears, you'll see a profile with an **Unclaimed** badge. This means the profile exists but hasn't been claimed by an authorized representative yet.
 
-4. **Verify Your Email**
-   - Check your email for verification link
-   - Click the link to confirm your account
-   - Return to Give Protocol to complete setup
+If your organization doesn't appear in the search results, it may not yet be in the platform's database. You can request to be added by contacting Give Protocol.
 
-### Account Setup Options
+## Claiming Your Profile
 
-#### Quick Setup (5 minutes)
+If your organization has an unclaimed profile, an authorized representative can claim it through a two-step verification process:
 
-- Basic profile information
-- Primary interests
-- Connect wallet (optional)
-- Start exploring immediately
+### Step 1 — Verify Identity
 
-#### Complete Setup (15 minutes)
+- **Registration number** — Enter your organization's official registration number (e.g., EIN in the format XX-XXXXXXX for US organizations). This is cross-checked against the profile's register data.
+- **Authorized signer** — Provide the full name and title of the person authorized to act on behalf of the organization (e.g., Executive Director, Board Chair, CFO).
+- **Official email** — Provide an email address associated with your organization. The platform checks the email domain against the organization's publicly listed website as a guardrail. If the domain doesn't match, the claim still proceeds but is flagged for manual review.
+- **Email verification** — A verification link is sent to the email address you provide. The link is valid for 24 hours. Click the link to confirm your identity.
 
-- Detailed profile with photo
-- Skills and expertise
-- Volunteer preferences
-- Donation interests
-- Social connections
+### Step 2 — Confirm Profile
 
-## Connect Your Wallet
+- Review the information sourced from the official register (name, registration number, classification, address). This data cannot be edited — it's preserved for donor trust and transparency.
+- **Edit your mission statement** — Add or update the description of your organization's work that donors will see.
+- **Upload your logo** — Add your organization's logo to your profile.
+- Submit your confirmed profile.
 
-### Why Connect a Wallet?
+That's it. Once submitted, your profile enters the **Claimed-Pending** state while verification completes (typically 24–48 hours). During this time, the profile shows a blue banner indicating verification is in progress, and donations remain in escrow mode.
 
-- Make cryptocurrency donations
-- Receive NFT certificates
-- Track on-chain activities
-- Access exclusive features
+## After Verification: Onboarding Checklist
 
-### Supported Wallets
+Once your identity is verified and your profile moves to **Verified** status, your charity dashboard will show an onboarding checklist to finish setup:
 
-- **MetaMask** (Recommended)
-- **WalletConnect**
-- **Coinbase Wallet**
-- **Rainbow Wallet**
-- **Trust Wallet**
+### Add a Receiving Wallet
 
-### Connection Steps
+Connect your organization's dedicated crypto wallet to receive cryptocurrency donations. This should be an organizational wallet — not a personal wallet belonging to any individual. For best security practices, consider using a multi-signature wallet that requires multiple approvals for transactions.
 
-1. **Install Wallet Extension**
+You don't need a wallet to receive fiat donations. This step is only required if you want to accept cryptocurrency.
 
-   - Download from official website
-   - Add to your browser
-   - Create new wallet or import existing
+### Connect a Bank Account
 
-2. **Connect to Give Protocol**
+Set up your connection to Helcim to receive fiat (USD) donations via ACH or wire transfer. This is required to receive card and bank-based donations through the platform.
 
-   - Click "Connect Wallet" button
-   - Select your wallet type
-   - Approve connection request
-   - Confirm network (Ethereum mainnet)
+### Complete Your Profile
 
-3. **Security Check**
-   - Verify connection URL
-   - Check for HTTPS
-   - Confirm Give Protocol domain
-   - Never share private keys
+Enhance your public profile with additional details:
 
-## For Donors
+- Program descriptions and impact stories
+- Website and social media links
+- Photos and media
+- Cause category tags for search discoverability
 
-### Setting Up Your Donor Profile
+## What You'll Get
 
-#### Profile Information
+Once fully set up, your organization can:
 
-- **Display Name**: How you appear to organizations
-- **Profile Photo**: Build trust with organizations
-- **Bio**: Share your giving motivations
-- **Interests**: Select causes you care about
-- **Privacy Settings**: Control what's public
+- **Receive crypto donations** on Moonbeam, Base, and Optimism — with just a 0.5% platform fee. Funds go directly to your wallet through smart contracts.
+- **Receive fiat donations** through Helcim (USD) and PayPal (international currencies) — with a 0.5% platform fee plus standard processor fees.
+- **Operate a Charitable Equity Fund** — An endowment-style vault where donated crypto assets generate sustainable yield for your organization. (Coming soon.)
+- **Participate in Portfolio/Cause Funds** — Be included in thematic pooled funds where donors support an entire field of charitable work. (Coming soon.)
+- **Issue volunteer credentials** — Use Soul-Bound Tokens to provide verifiable, portable recognition to your volunteers. (Coming soon.)
+- **Access a charity dashboard** — View incoming donations, manage your profile, track disbursements, and monitor fund performance.
 
-#### Donation Preferences
+## Donor Nominations
 
-- **Preferred Currencies**: ETH, USDC, DAI, etc.
-- **Recurring Donations**: Set up monthly giving
-- **Anonymous Options**: Donate privately
-- **Tax Settings**: Configure receipt preferences
+Even before you claim your profile, donors may have already nominated your organization. Nominations are a way for donors to signal that they want to support you on the platform. If donors have nominated your organization, you'll see the count on your profile page — this is a sign that there's an audience ready to give once you're set up.
 
-### Making Your First Donation
+## Frequently Asked Questions
 
-1. **Find an Organization**
+**How long does verification take?**
+Typically 24–48 hours after you complete the email verification step.
 
-   - Browse by category
-   - Search by name
-   - Check verification status
-   - Read impact stories
+**What if my organization isn't in the database?**
+Contact Give Protocol to discuss adding your organization. If you're registered with a supported charity register, we can import your record. For organizations in jurisdictions not yet integrated, we can discuss manual verification options.
 
-2. **Choose Amount**
+**Do we need to accept crypto?**
+No. You can connect only a bank account and receive fiat donations. Adding a crypto wallet is optional and can be done later.
 
-   - Select cryptocurrency
-   - Enter donation amount
-   - Review conversion rate
-   - Check transaction fees
+**What are the fees?**
+Give Protocol charges a 0.5% platform fee on direct donations (both crypto and fiat). Portfolio/Cause Funds carry a 1% fee. For fiat donations, the payment processor's standard fee also applies (charged by Helcim or PayPal, not by Give Protocol). CEF vaults carry a 5% fee on generated yield, never on principal. All fee rates are disclosed upfront and are subject to 30 days' prior written notice before any change.
 
-3. **Complete Donation**
-   - Confirm wallet transaction
-   - Wait for blockchain confirmation
-   - Receive instant receipt
-   - Track your impact
+**What agreement do we need to sign?**
+Charities sign a Platform Participation Agreement covering authorization, fee disclosure, risk disclosures, data handling, and dispute resolution for all donation types (direct crypto, direct fiat, portfolio funds, and CEF vaults).
 
-## For Organizations
-
-### Organization Verification
-
-#### Requirements
-
-- **Legal Status**: 501(c)(3) or equivalent
-- **Documentation**: IRS letter, articles of incorporation
-- **Bank Account**: For fiat conversions
-- **Leadership Info**: Board members, key staff
-- **Mission Statement**: Clear charitable purpose
-
-#### Verification Process
-
-1. **Submit Application**
-
-   - Complete organization profile
-   - Upload required documents
-   - Provide website and social media
-   - Agree to terms of service
-
-2. **Review Period** (3-5 business days)
-
-   - Document verification
-   - Background checks
-   - Compliance review
-   - Additional information requests
-
-3. **Approval**
-   - Receive verified badge
-   - Access full features
-   - Start accepting donations
-   - Create campaigns
-
-### Setting Up Your Organization
-
-#### Profile Essentials
-
-- **Organization Name**: Legal entity name
-- **Logo**: High-resolution image
-- **Mission Statement**: Clear and compelling
-- **Impact Stories**: Real examples
-- **Team Members**: Key staff profiles
-
-#### Campaign Creation
-
-- **Campaign Title**: Descriptive and engaging
-- **Funding Goal**: Realistic target
-- **Timeline**: Start and end dates
-- **Description**: Detailed use of funds
-- **Updates**: Regular progress reports
-
-## For Volunteers
-
-### Volunteer Profile Setup
-
-#### Skills & Interests
-
-- **Professional Skills**: Marketing, IT, design, etc.
-- **Languages**: Communication abilities
-- **Availability**: Hours per week/month
-- **Location**: Remote or specific area
-- **Causes**: Preferred focus areas
-
-#### Volunteer Preferences
-
-- **Type of Work**: Hands-on, administrative, technical
-- **Commitment Level**: One-time, ongoing, project-based
-- **Group Size**: Individual, small team, large group
-- **Environment**: Indoor, outdoor, virtual
-
-### Finding Opportunities
-
-1. **Search Filters**
-
-   - Location (remote available)
-   - Time commitment
-   - Skills needed
-   - Cause area
-   - Organization type
-
-2. **Application Process**
-   - Review opportunity details
-   - Check requirements
-   - Submit application
-   - Wait for organization response
-   - Confirm participation
-
-## Best Practices
-
-### Security Tips
-
-- **Use Strong Passwords**: Unique and complex
-- **Enable 2FA**: Add extra security layer
-- **Verify URLs**: Always check you're on official site
-- **Secure Wallet**: Use hardware wallet for large amounts
-- **Private Keys**: Never share with anyone
-
-### Profile Optimization
-
-- **Complete Profile**: 100% completion gets more engagement
-- **Real Photo**: Build trust and connection
-- **Regular Updates**: Keep information current
-- **Engagement**: Respond to messages promptly
-- **Reviews**: Encourage feedback
-
-### Community Guidelines
-
-- **Be Respectful**: Treat everyone with kindness
-- **Stay Honest**: Provide accurate information
-- **Protect Privacy**: Don't share others' personal info
-- **Give Credit**: Acknowledge contributions
-
-## Next Steps
-
-### Immediate Actions
-
-1. **Complete Your Profile**
-
-   - Add photo and bio
-   - Set preferences
-   - Connect social accounts
-
-2. **Explore the Platform**
-
-   - Browse organizations
-   - Read success stories
-   - Join community forums
-
-3. **Make Your First Impact**
-   - Small donation to start
-   - Sign up for volunteer opportunity
-   - Share with friends
-
-### Learning Resources
-
-- [Organizations]({{ '/docs/organizations/' | relative_url }})
-- [Security Model]({{ '/docs/technical/security-model/' | relative_url }})
-- [Documentation]({{ '/docs/' | relative_url }})
-- [Troubleshooting]({{ '/docs/troubleshooting/' | relative_url }})
-
-### Get Support
-
-- **Help Center**: Comprehensive guides
-- **Community Forums**: Peer support
-- **Live Chat**: Real-time assistance
-- **Email Support**: support@giveprotocol.org
-
-## Welcome to the Community!
-
-You're now part of a global movement transforming charitable giving. Whether you're here to donate, volunteer, or fundraise, your participation makes a difference. Start small, learn as you go, and watch your impact grow.
-
-### Connect With Us
-
-- Join our [Discord community](https://discord.gg/giveprotocol)
-- Follow us on [Twitter](https://twitter.com/giveprotocol)
-- Subscribe to our newsletter
-- Attend virtual events
-
-Together, we're building a more transparent, efficient, and impactful future for charitable giving. Welcome aboard!
+**Can international organizations join?**
+Yes, as the platform integrates additional national charity registers. For organizations in countries not yet supported, contact Give Protocol to discuss equivalency determination or manual verification.

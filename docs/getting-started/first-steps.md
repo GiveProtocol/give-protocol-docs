@@ -1,304 +1,99 @@
 ---
 title: First Steps
-description: Your first steps after creating a Give Protocol account
+description: What to do after creating your Give Protocol account — browsing charities, making your first donation, and exploring the platform.
 permalink: /docs/getting-started/first-steps/
 ---
 
-Welcome to Give Protocol! Now that you've created your account and connected your wallet, let's walk through your first steps to start making an impact.
+# First Steps
 
-## Getting Oriented
+You've created your account. Here's what to do next.
 
-### Your Dashboard
+## Browse Charities
 
-Your dashboard is your home base on Give Protocol. Here you'll find:
+Give Protocol features thousands of verified charitable organizations sourced from official national charity registers. You can browse and search for charities by name, registration number, location, or cause category.
 
-- **Account overview** and balance
-- **Recent activity** and transaction history
-- **Recommended organizations** based on your interests
-- **Quick actions** for common tasks
+Each charity has a profile page showing:
 
-### Navigation Menu
+- Organization name, location, and registration details
+- Mission statement and cause category
+- Verification status (Unclaimed, Verification Pending, or Verified)
+- A donate widget for making contributions
 
-Familiarize yourself with the main sections:
+**Verified charities** have completed the claim and identity verification process. They can receive donations directly (crypto and fiat), operate CEF vaults, and manage volunteer credentials.
 
-- **Discover**: Browse organizations and campaigns
-- **My Activity**: Track your donations and volunteering
-- **Wallet**: Manage your connected wallets and assets
-- **Settings**: Customize your account and preferences
+**Unclaimed charities** have profiles auto-populated from official register data but haven't yet claimed their profile on Give Protocol. You can still donate to unclaimed charities — your contribution will be held in escrow until the organization claims its profile and connects a payment method. You can cancel an escrowed donation at any time before it's released.
 
-## Making Your First Donation
+If a charity you care about hasn't been claimed yet, you can **nominate** them — this sends an invitation to the organization's public contact email encouraging them to join. The nomination count is visible on the profile, creating social proof for other donors and the organization.
 
-### Step 1: Find an Organization
+## Make Your First Donation
 
-1. Click **"Discover"** in the main navigation
-2. **Browse by category** (Education, Health, Environment, etc.)
-3. **Use the search bar** to find specific causes
-4. **Filter by location** if you prefer local organizations
-5. **Check verification badges** for trusted organizations
+### Donating by Card (Fiat)
 
-### Step 2: Review Organization Profile
+1. Navigate to the charity's profile page.
+2. In the donate widget (right sidebar on desktop), enter your donation amount.
+3. Select your payment method — card payment is processed through Helcim (USD) or PayPal (international currencies).
+4. Complete the payment in the secure hosted payment form.
+5. You'll receive a receipt with the charity's name, your donation amount, and a reference number prefixed with "GP-."
 
-Before donating, review:
+No wallet or crypto knowledge is required. Give Protocol charges a 0.5% platform fee on direct fiat donations, plus the payment processor's standard fee (charged by Helcim or PayPal, not by Give Protocol).
 
-- **Mission statement** and goals
-- **Impact metrics** and achievements
-- **Financial transparency** and fund usage
-- **Recent updates** and news
-- **Verification status** and credentials
+### Donating with Crypto
 
-### Step 3: Choose Donation Amount
+1. Make sure your wallet is connected and set to the network you want to donate on (Moonbeam, Base, or Optimism).
+2. Navigate to the charity's profile page.
+3. In the donate widget, select the token you'd like to donate. The widget shows only tokens available on your connected network.
+4. Enter the amount. A gas fee estimate will appear before you confirm.
+5. Click **Donate** and confirm the transaction in your wallet.
+6. The smart contract routes your donation directly to the charity's wallet. A `DonationProcessed` event is recorded on-chain — you can verify the transaction on a block explorer.
 
-1. Click **"Donate"** on the organization's page
-2. **Select cryptocurrency** (ETH, USDC, MATIC, etc.)
-3. **Enter donation amount**
-4. **Choose network** (Polygon for lower fees)
-5. **Review transaction details**
+Give Protocol charges a 0.5% platform fee on direct crypto donations, deducted automatically by the smart contract. You also pay the blockchain network's gas fee.
 
-### Step 4: Complete Transaction
+### Supported Tokens
 
-1. Click **"Donate Now"**
-2. **Confirm in your wallet** (MetaMask, etc.)
-3. **Wait for confirmation** (usually 1-3 minutes)
-4. **Receive confirmation** email and receipt
+The tokens available depend on which network your wallet is connected to:
 
-## Setting Up Recurring Donations
+| Network | Available Tokens |
+|---------|-----------------|
+| Moonbeam | GLMR, xcDOT, xcUSDC, xcUSDT, WGLMR |
+| Base | ETH, USDC, USDT, DAI |
+| Optimism | ETH, USDC.e, DAI, OP |
 
-Make consistent impact with automated giving:
+## Explore Charitable Equity Funds (CEFs)
 
-### Benefits of Recurring Giving
+CEFs are endowment-style vaults that generate sustainable yield for charities. Instead of a one-time donation that gets spent, a CEF contribution is deployed into conservative yield-generating protocols, and the returns flow to the charity on an ongoing basis.
 
-- **Consistent support** for organizations
-- **Automatic donations** without manual effort
-- **Better tax planning** with predictable giving
-- **Increased impact** through sustained funding
+Once CEF vaults are live for a charity, you'll see the option to contribute to their fund directly from the charity's profile page. The yield (minus a 5% protocol fee that funds Give Protocol's operations) is distributed to the charity on a regular schedule. The principal is never touched.
 
-### How to Set Up
+CEFs are currently in development and will be available on the platform after mainnet launch and security audits.
 
-1. Visit your chosen organization's page
-2. Click **"Set Up Recurring Donation"**
-3. **Choose frequency**: Weekly, Monthly, or Quarterly
-4. **Set amount** for each donation
-5. **Select start date** and duration
-6. **Authorize smart contract** in your wallet
+## Explore Portfolio / Cause Funds
 
-### Managing Recurring Donations
+Portfolio Funds let you support an entire field of charitable work — like environmental conservation, education, or poverty relief — with a single contribution. Your donation is distributed equally among the verified charities participating in that fund.
 
-- **View all subscriptions** in your dashboard
-- **Pause or cancel** anytime
-- **Modify amounts** or frequency
-- **Track total giving** over time
+Three initial funds are planned. The participating charities are curated by the Foundation based on verification and mission alignment, with final composition determined through community governance.
 
-## Exploring Volunteer Opportunities
+Portfolio Funds are coming soon as a post-launch feature.
 
-If you have time to offer, not just money:
+## Volunteer Opportunities
 
-### Finding Opportunities
+Give Protocol is building a system for verifiable volunteer credentials using Soul-Bound Tokens (SBTs). Verified charities will be able to post volunteer opportunities and issue non-transferable credential tokens to volunteers who complete them — attesting to hours served, skills demonstrated, and impact achieved.
 
-1. Go to **"Volunteer"** section
-2. **Filter by skills** (Marketing, Development, Design, etc.)
-3. **Choose remote or local** opportunities
-4. **Select time commitment** (One-time, Ongoing, Project-based)
+These credentials are recorded on the blockchain and can be exported as W3C Verifiable Credentials for use on resumes, LinkedIn, or other platforms.
 
-### Applying to Volunteer
+The volunteer credential system is currently in development.
 
-1. **Read opportunity details** carefully
-2. **Check requirements** and qualifications
-3. **Submit application** with relevant experience
-4. **Wait for organization response**
-5. **Complete background check** if required
+## Track Your Impact
 
-### Time Tracking
+Your [Dashboard](/docs/getting-started/dashboard/) provides a unified view of everything you've done on Give Protocol:
 
-- **Log hours** through the platform
-- **Get verification** from organizations
-- **Build volunteer resume** with verified experience
-- **Earn recognition badges** for milestones
-
-## Understanding Transaction Fees
-
-### Network Fees
-
-- **Polygon**: Usually $0.01-0.10 per transaction
-- **Ethereum**: $5-50 depending on network congestion
-- **Platform Fee**: 2.5% of donation amount
-
-### Fee Optimization Tips
-
-- **Use Polygon network** for smaller donations
-- **Time transactions** during low congestion periods
-- **Batch multiple donations** when possible
-- **Monitor gas prices** with tracking tools
-
-## Tax Receipt Management
-
-### Automatic Receipts
-
-- **Generated automatically** for all donations
-- **Sent to registered email** address
-- **Available in dashboard** for download
-- **Compliant with tax regulations** in your jurisdiction
-
-### Tax Planning
-
-- **Track annual giving** in your dashboard
-- **Set giving goals** for tax optimization
-- **Download year-end summaries**
-- **Consult tax advisor** for complex situations
-
-## Security Best Practices
-
-### Account Security
-
-- **Enable two-factor authentication** immediately
-- **Use strong, unique passwords**
-- **Review account activity** regularly
-- **Update contact information** when needed
-
-### Wallet Security
-
-- **Never share private keys** or seed phrases
-- **Verify transaction details** before confirming
-- **Use hardware wallets** for large amounts
-- **Keep wallet software updated**
-
-### Donation Safety
-
-- **Verify organization credentials** before donating
-- **Start with small amounts** to test
-- **Double-check wallet addresses**
-- **Be cautious of urgent requests**
-
-## Building Your Profile
-
-### Public Profile
-
-- **Add profile picture** and bio
-- **Share your giving interests**
-- **Connect social media** accounts (optional)
-- **Set privacy preferences**
-
-### Privacy Settings
-
-- **Control profile visibility**
-- **Manage donation history sharing**
-- **Set communication preferences**
-- **Configure notification settings**
-
-## Tracking Your Impact
-
-### Dashboard Metrics
-
-- **Total donations** made
-- **Number of organizations** supported
-- **Volunteer hours** contributed
-- **Impact stories** from recipients
-
-### Sharing Your Impact
-
-- **Generate impact reports**
-- **Share on social media**
-- **Invite friends** to join
-- **Create giving challenges**
-
-## Common First-Time Mistakes to Avoid
-
-### Donation Mistakes
-
-- **Not checking verification status** of organizations
-- **Sending to wrong network** (ETH vs Polygon)
-- **Insufficient gas fees** causing failed transactions
-- **Not saving tax receipts**
-
-### Security Mistakes
-
-- **Not enabling 2FA** immediately
-- **Sharing wallet information** with others
-- **Not backing up seed phrases** properly
-- **Ignoring security warnings**
-
-### Planning Mistakes
-
-- **Not setting giving budgets**
-- **Impulse donations** without research
-- **Not tracking donations** for taxes
-- **Forgetting to update contact info**
-
-## Getting Help and Support
-
-### Self-Service Resources
-
-- **[Support Center](/docs/support/)** - Comprehensive guides
-- **[Troubleshooting](/docs/troubleshooting/)** - Common questions
-- **[Technical Documentation](/docs/technical/)** - Detailed guides
-
-### Contact Support
-
-- **Email**: support@giveprotocol.org
-- **Response time**: Within 24 hours
-- **Live chat**: Available during business hours
-- **Urgent issues**: Priority support for security concerns
-
-## Joining the Community
-
-### Connect with Others
-
-- **Discord** - Discussions and Q&A
-- **Twitter/X** - Follow for updates
-- **Local meetups** - In-person events (where available)
-- **Online events** - Webinars and virtual meetups
-
-### Contributing to the Platform
-
-- **Provide feedback** on features
-- **Report bugs** or issues
-- **Suggest improvements**
-- **Help other users** in forums
-
-## Setting Long-Term Goals
-
-### Giving Goals
-
-- **Annual giving targets**
-- **Cause-specific allocations**
-- **Impact measurement objectives**
-- **Tax optimization planning**
-
-### Volunteer Goals
-
-- **Skill development targets**
-- **Time commitment goals**
-- **Cause area focus**
-- **Leadership opportunities**
+- **Donation history** — All your crypto and fiat donations in one place, with transaction details, timestamps, and verification links.
+- **CEF portfolio** — Track the performance of any Charitable Equity Funds you've contributed to.
+- **Credentials** — View any Soul-Bound Tokens you've earned for donations or volunteer work.
+- **Receipts** — Access and download donation receipts for your records.
 
 ## Next Steps
 
-Now that you've completed your first steps:
-
-1. **[Explore Organizations](/docs/organizations/)** - Find more causes
-2. **[Learn About Verification](/docs/organizations/verification/)** - Understand trust signals
-3. **[View Documentation](/docs/)** - Role-specific information
-4. **[Understand Fees](/docs/technical/fees/)** - Optimize your donations
-
-Congratulations on taking your first steps with Give Protocol! You're now part of a global community working to make charitable giving more transparent, efficient, and impactful.
-
-## Quick Reference
-
-### Essential Actions
-
-- ✓ Create account and verify email
-- ✓ Connect cryptocurrency wallet
-- ✓ Enable two-factor authentication
-- ✓ Make first donation
-- ✓ Set up recurring giving (optional)
-- ✓ Complete profile
-- ✓ Join community
-
-### Important Links
-
-- **Dashboard**: Your home base
-- **Discover**: Find organizations
-- **Wallet**: Manage funds
-- **Settings**: Customize account
-- **Help**: Get support
-
-Welcome to the future of charitable giving!
+- **Complete your profile** — Add a display name and notification preferences from Settings.
+- **Link a wallet** (if you haven't) — Unlock crypto donations and on-chain credentials from Settings → Wallet.
+- **Nominate a charity** — If an organization you support isn't on the platform yet, nominate them from their unclaimed profile.
+- **Tell others** — Give Protocol grows through word of mouth. Share a charity's profile link or your experience with friends and colleagues.
