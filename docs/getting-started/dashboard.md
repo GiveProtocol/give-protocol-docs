@@ -1,390 +1,121 @@
 ---
 title: Dashboard
-description: Complete guide to navigating and using your Give Protocol dashboard
+description: How to navigate the Give Protocol dashboard — your central hub for donations, credentials, settings, and organization management.
 permalink: /docs/getting-started/dashboard/
 ---
 
-Your Give Protocol dashboard is your command center for charitable giving. This guide will help you understand every feature and make the most of your giving experience.
+# Dashboard
 
-## Dashboard Overview
+The Give Protocol dashboard is your central hub. It's a single page at `/dashboard` that adapts based on your role (Donor or Charity) and your connected state (wallet linked or not). Everything you need — donation history, settings, wallet management, and organization tools — lives here.
 
-When you log in, your dashboard provides:
+## Accessing Your Dashboard
 
-- **Quick overview** of your account status
-- **Recent activity** and transactions
-- **Personalized recommendations**
-- **Important notifications**
-- **Easy access** to key features
+After signing in (via email, wallet, or both), you're taken directly to your dashboard. You can return to it at any time by clicking **Dashboard** in the navigation bar.
 
-## Main Dashboard Sections
+## Donor Dashboard
 
-### Account Summary (Top Section)
+If you're logged in as a donor, your dashboard includes:
 
-#### Balance Overview
+### Donation History
 
-- **Total Portfolio Value**: Combined value of all connected wallets
-- **Available to Donate**: Funds ready for giving
-- **Pending Transactions**: Donations in progress
-- **Tax Year Summary**: Annual donation totals
+A unified view of all your contributions — both crypto and fiat — in one table. Each entry shows:
 
-#### Quick Stats
+- **Type** — Crypto (with chain icon and token) or Fiat (with currency badge)
+- **Amount** — The donation amount in the original currency
+- **Charity** — The recipient organization
+- **Date** — When the donation was made
+- **Status** — Confirmed, pending, or escrowed
+- **Verification** — For crypto donations, a link to the transaction on the relevant block explorer. For fiat donations, a Helcim or PayPal reference.
 
-- **Total Donated**: Lifetime giving amount
-- **Organizations Supported**: Number of recipients
-- **Volunteer Hours**: Time contributed
-- **Impact Score**: Platform-calculated giving impact
+If you linked a wallet after making earlier donations with it, those historical on-chain transactions will appear in your history automatically — the system looks up contributions by both your user ID and your linked wallet address.
 
-### Recent Activity Feed
+### CEF Portfolio (Coming Soon)
 
-#### Transaction History
+Once Charitable Equity Funds are live, this section will show:
 
-- **Recent donations** with timestamps
-- **Transaction status** (Confirmed, Pending, Failed)
-- **Network details** (Ethereum, Polygon)
-- **Tax receipt links**
+- CEF vaults you've contributed to
+- Current principal balance and yield performance
+- Distribution history to the beneficiary charity
+- Your share of the fund
 
-#### Volunteer Activity
+### SBT Credentials (Coming Soon)
 
-- **Hours logged** with organizations
-- **Verification status** of volunteer time
-- **Upcoming commitments**
-- **Recognition achievements**
+A display of any Soul-Bound Tokens you've earned, including:
 
-### Recommended for You
+- Donor reputation credentials (automatically issued based on your giving history)
+- Volunteer credentials (issued by verified charities)
+- Impact achievement badges (tied to specific campaigns or milestones)
 
-#### Personalized Suggestions
+### Tax Receipts
 
-- **Organizations** matching your interests
-- **Campaigns** with urgent needs
-- **Volunteer opportunities** using your skills
-- **Similar donors'** favorite causes
+Access and download receipts for any donation you've made. Receipts include the Foundation's details, the receiving charity's name, your donation amount, and a GP-prefixed reference number.
 
-#### Trending Now
+### Settings
 
-- **Popular campaigns** with high engagement
-- **Emergency appeals** requiring immediate support
-- **Newly verified** organizations
-- **Community spotlights**
+- **Account** — Update your display name, email, and notification preferences.
+- **Wallet** — Link or unlink a crypto wallet. View your linked address and the date it was connected.
 
-## Navigation Menu
+## Charity Dashboard
 
-### Primary Navigation
+If you're logged in as a charity representative and your organization's profile is verified, your dashboard provides management tools for your organization.
 
-#### Discover
+### Post-Claim Onboarding Checklist
 
-- **Browse Organizations**: Search and filter charities
-- **Active Campaigns**: Current fundraising drives
-- **Volunteer Opportunities**: Time-based giving
-- **Emergency Appeals**: Urgent causes
+If you've recently claimed your organization's profile, the dashboard will prominently display your onboarding checklist:
 
-#### My Activity
+- ✅ Identity verified
+- ⬜ Add receiving wallet — Connect your organization's crypto wallet to receive crypto donations
+- ⬜ Connect bank account — Set up Helcim to receive fiat (USD) donations
+- ⬜ Complete profile — Add your mission statement, logo, and program details
 
-- **Donation History**: Complete transaction log
-- **Recurring Gifts**: Automated donation schedule
-- **Volunteer Log**: Time tracking and verification
-- **Impact Reports**: Detailed giving summaries
+Complete these steps to unlock full functionality and release any escrowed donations from before your profile was claimed.
 
-#### Wallet
+### Incoming Donations
 
-- **Connected Wallets**: Manage linked accounts
-- **Transaction Queue**: Pending operations
-- **Network Settings**: Choose blockchain networks
-- **Security Settings**: Wallet-specific configurations
+A view of all donations received by your organization, combining crypto and fiat:
 
-#### Profile
+- Individual transaction details with donor information (where provided)
+- Running totals by time period
+- On-chain verification links for crypto donations
 
-- **Public Profile**: Your charitable giving persona
-- **Privacy Settings**: Control information sharing
-- **Notification Preferences**: Customize alerts
-- **Account Settings**: Basic account management
+### CEF Vault Management (Coming Soon)
 
-### Quick Actions Bar
+Once CEF vaults are deployed, this section will let you:
 
-#### One-Click Actions
+- View your vault's current balance and yield performance
+- See the distribution schedule and history
+- Optionally reinvest a portion of yield to grow the fund
+- Review which protocols your assets are deployed in
 
-- **Make Donation**: Fast giving to favorite organizations
-- **Log Volunteer Time**: Quick time entry
-- **View Receipts**: Tax document access
-- **Contact Support**: Help and assistance
+### Portfolio Fund Status (Coming Soon)
 
-## Dashboard Customization
+If your organization participates in a Portfolio/Cause Fund, this section shows:
 
-### Layout Options
+- Which fund(s) you're included in
+- Distribution history and upcoming scheduled distributions
+- Your share of the fund
 
-#### Widget Management
+### Volunteer Opportunity Management (Coming Soon)
 
-- **Add/Remove widgets** based on preferences
-- **Resize sections** for optimal viewing
-- **Reorder elements** by importance
-- **Save layouts** for different devices
+Tools for managing volunteer credentials:
 
-#### Display Preferences
+- Post volunteer opportunities
+- Issue Soul-Bound Token credentials to verified volunteers
+- Track issued credentials and volunteer activity
 
-- **Dark/Light mode** selection
-- **Currency display** (USD, ETH, local currency)
-- **Date formats** and time zones
-- **Language selection**
+### Fiat Disbursement Pipeline
 
-### Notification Center
+A view of the status of fiat donations being processed for disbursement to your organization. Statuses include Pending, Processing, and Disbursed. During the early phase of the platform, fiat disbursements are processed manually in batches (ACH or wire transfer) and status updates are managed by the Give Protocol team.
 
-#### Alert Types
+## Wallet Connection Prompt
 
-- **Donation confirmations**
-- **Organization updates**
-- **Volunteer opportunities**
-- **Tax document availability**
-- **Security notifications**
+If you're signed in via email and attempt a blockchain-specific action (like making a crypto donation or viewing SBT credentials), a modal will appear prompting you to connect a wallet. This is a contextual prompt — it appears only when needed, not as a barrier to accessing the platform.
 
-#### Notification Settings
+You can dismiss it and continue using fiat features, or connect your wallet to proceed with the blockchain action.
 
-- **Email preferences**
-- **Push notifications** (mobile)
-- **SMS alerts** (optional)
-- **Frequency controls**
+## Tips for Using the Dashboard
 
-## Account Type Differences
-
-### Donor Dashboard Features
-
-#### Giving Overview
-
-- **Annual giving goals** and progress
-- **Favorite organizations** quick access
-- **Donation analytics** and trends
-- **Tax optimization** suggestions
-
-#### Discovery Tools
-
-- **Cause-based filtering**
-- **Geographic preferences**
-- **Impact measurement** focus
-- **Peer recommendations**
-
-### Organization Dashboard Features
-
-#### Fundraising Analytics
-
-- **Donation totals** and trends
-- **Donor demographics**
-- **Campaign performance**
-- **Revenue forecasting**
-
-#### Donor Management
-
-- **Donor profiles** and history
-- **Communication tools**
-- **Thank you automation**
-- **Receipt generation**
-
-#### Campaign Tools
-
-- **Create fundraising campaigns**
-- **Update campaign content**
-- **Track progress** toward goals
-- **Analyze donor engagement**
-
-### Volunteer Dashboard Features
-
-#### Time Tracking
-
-- **Log volunteer hours**
-- **Track across organizations**
-- **Get verification** from recipients
-- **Build volunteer resume**
-
-#### Opportunity Discovery
-
-- **Skill-based matching**
-- **Location preferences**
-- **Time commitment** filtering
-- **Application tracking**
-
-#### Achievement System
-
-- **Volunteer badges** and recognition
-- **Milestone celebrations**
-- **Community rankings**
-- **Reference requests**
-
-## Advanced Dashboard Features
-
-### Analytics and Reporting
-
-#### Personal Analytics
-
-- **Giving patterns** over time
-- **Cause allocation** pie charts
-- **Impact measurement** tracking
-- **Comparison to peers** (anonymous)
-
-#### Export Options
-
-- **Tax reports** (PDF, CSV)
-- **Donation summaries**
-- **Volunteer hour reports**
-- **Custom date ranges**
-
-### Smart Recommendations
-
-#### AI-Powered Suggestions
-
-- **Similar organizations** to those you support
-- **Optimal donation timing**
-- **Tax-efficient giving** strategies
-- **Impact maximization** opportunities
-
-#### Trend Analysis
-
-- **Seasonal giving patterns**
-- **Cause popularity** trends
-- **Network effects** from your donations
-- **Community impact** metrics
-
-## Mobile Dashboard
-
-### Mobile-Optimized Features
-
-#### Touch-Friendly Interface
-
-- **Swipe navigation** between sections
-- **Tap-to-donate** quick actions
-- **Mobile wallet** integration
-- **Offline viewing** capabilities
-
-#### Mobile-Specific Tools
-
-- **QR code donations**
-- **Location-based** organization discovery
-- **Push notifications**
-- **Camera receipt** scanning
-
-### Progressive Web App (PWA)
-
-- **Install on home screen**
-- **Offline functionality**
-- **Native app experience**
-- **Background sync**
-
-## Dashboard Security
-
-### Access Controls
-
-#### Session Management
-
-- **Auto-logout** after inactivity
-- **Session monitoring**
-- **Device recognition**
-- **Suspicious activity** alerts
-
-#### Two-Factor Authentication
-
-- **2FA requirement** for sensitive actions
-- **Multiple 2FA methods**
-- **Backup code** management
-- **Device authorization**
-
-### Privacy Protection
-
-#### Data Visibility
-
-- **Private mode** for sensitive viewing
-- **Granular privacy** controls
-- **Anonymous browsing** options
-- **Data retention** settings
-
-## Troubleshooting Common Issues
-
-### Loading Problems
-
-- **Clear browser cache**
-- **Check internet connection**
-- **Disable ad blockers**
-- **Try incognito mode**
-
-### Sync Issues
-
-- **Refresh wallet connection**
-- **Check network status**
-- **Update browser**
-- **Contact support**
-
-### Display Problems
-
-- **Adjust zoom level**
-- **Clear browser data**
-- **Check device compatibility**
-- **Update dashboard layout**
-
-## Keyboard Shortcuts
-
-### Navigation Shortcuts
-
-- **D**: Go to Discover
-- **A**: My Activity
-- **W**: Wallet
-- **P**: Profile
-- **?**: Help
-
-### Action Shortcuts
-
-- **Ctrl+D**: Quick donate
-- **Ctrl+L**: Log volunteer time
-- **Ctrl+R**: View receipts
-- **Ctrl+S**: Settings
-
-## Dashboard Tips and Best Practices
-
-### Daily Use
-
-- **Check notifications** first
-- **Review recent activity**
-- **Monitor recurring donations**
-- **Update volunteer logs**
-
-### Weekly Review
-
-- **Analyze giving patterns**
-- **Discover new organizations**
-- **Check tax receipt status**
-- **Update profile information**
-
-### Monthly Planning
-
-- **Review giving goals**
-- **Plan upcoming donations**
-- **Export financial reports**
-- **Engage with community**
-
-## Getting the Most from Your Dashboard
-
-### Personalization
-
-- **Set giving goals** and track progress
-- **Customize widget layout**
-- **Configure notifications**
-- **Join community discussions**
-
-### Efficiency Tips
-
-- **Use quick actions** for frequent tasks
-- **Set up recurring donations**
-- **Enable smart notifications**
-- **Learn keyboard shortcuts**
-
-## Next Steps
-
-Now that you understand your dashboard:
-
-1. **[Explore Organizations](/docs/organizations/)** - Find causes to support
-2. **[Set Up Recurring Giving](/docs/donors/)** - Automate your impact
-3. **[Track Your Impact](/docs/donors/tracking-impact/)** - Measure your difference
-
-## Need Help?
-
-If you need assistance with your dashboard:
-
-- **[Support Center](/docs/support/)** - Comprehensive guides
-- **[Troubleshooting](/docs/troubleshooting/)** - Common questions
-- **Support**: support@giveprotocol.org
-
-Your dashboard is designed to make charitable giving simple, transparent, and impactful. Take time to explore all features and customize it to match your giving style and goals.
+- **Bookmark it.** The dashboard is at `giveprotocol.io/dashboard` — you can go straight there after signing in.
+- **Check both views.** If you have both donor and charity roles, the dashboard adapts to show relevant sections for each.
+- **Donation history is retroactive.** If you link a wallet that was used for donations before your account existed, those transactions will appear in your history.
+- **Settings are always accessible.** Account, wallet, and notification settings are available from the dashboard sidebar or settings page regardless of your role.

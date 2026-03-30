@@ -1,213 +1,64 @@
 ---
 title: What Is Give Protocol
-description: Learn about Give Protocol - a revolutionary blockchain-based platform transforming charitable giving through transparency, efficiency, and global accessibility
+description: An overview of Give Protocol — what it does, how it works, and what makes it different from traditional giving platforms.
 permalink: /docs/getting-started/what-is-give-protocol/
-date: 2025-08-17
 ---
 
-## Overview
+# What Is Give Protocol
 
-Give Protocol is a next-generation charitable giving platform that leverages blockchain technology to create a transparent, efficient, and globally accessible ecosystem for donations and volunteering. By combining the power of cryptocurrency with traditional charitable giving, we're building a future where every donation is traceable, every organization is accountable, and every act of kindness is recorded immutably.
+Give Protocol is a philanthropic platform built on blockchain technology that enables transparent, efficient charitable giving. It connects donors directly with verified charitable organizations through cryptocurrency and traditional payment methods, while introducing sustainable funding mechanisms that go beyond one-time donations.
 
-## Our Mission
+## The Problem We're Solving
 
-To revolutionize charitable giving by:
+Traditional charitable giving faces persistent challenges that reduce its effectiveness:
 
-- **Eliminating barriers** between donors and causes they care about
-- **Ensuring transparency** in how donations are used
-- **Reducing costs** associated with traditional donation processing
-- **Empowering organizations** with modern fundraising tools
-- **Creating trust** through blockchain verification
+- **Transparency gaps.** Most donors have limited visibility into how their contributions are used. Impact reporting often lags months behind the actual donation.
+- **High overhead.** Administrative costs, payment processing fees, and intermediary charges can consume a significant portion of donated funds before they reach the intended cause.
+- **Unsustainable funding.** The majority of charitable funding comes through short-term, project-specific grants or one-time donations, creating instability for organizations trying to plan long-term.
+- **Limited recognition for volunteers.** Volunteer contributions — often as valuable as monetary donations — lack a standardized, portable system for verification and recognition.
 
-## Key Features
+## How Give Protocol Works
 
-### 🌐 Global Accessibility
+Give Protocol addresses these challenges through four core features:
 
-- Accept donations from anywhere in the world
-- No geographical restrictions or banking limitations
-- Support for multiple cryptocurrencies
-- Instant cross-border transactions
+### Direct Donations
+Donors can give directly to verified charities using cryptocurrency or fiat (card/bank) payments. Crypto donations are routed through smart contracts that transfer funds directly to the charity's wallet in a single, transparent, on-chain transaction. Fiat donations are processed through Helcim (USD) or PayPal (international currencies).
 
-### 🔍 Complete Transparency
+Give Protocol charges a 0.5% platform fee on direct donations — deducted automatically by the smart contract for crypto, or applied to the gross amount for fiat. For crypto, donors also pay the standard blockchain network fee (gas). For fiat, donors also pay the payment processor's standard fee (charged by Helcim or PayPal). This is significantly lower than the 3–5% charged by most traditional giving platforms.
 
-- Every donation tracked on the blockchain
-- Public verification of fund allocation
-- Real-time tracking of campaign progress
-- Immutable transaction records
+### Charitable Equity Funds (CEFs)
+CEFs are Give Protocol's flagship innovation for sustainable funding. They work like a crypto-native endowment: donated assets are deployed into conservative, audited yield-generating protocols (such as stablecoin lending on Aave or Moonwell), and the yield produced is distributed to the designated charity on a regular schedule.
 
-### 💰 Low Fees
+Each charity has its own self-custody CEF vault — the charity retains sole ownership and signing authority over its assets. The Foundation provides the smart contract infrastructure and curated strategy configurations but never takes custody of the principal. A 5% fee on generated yield (never on the principal) is the primary way Give Protocol funds its operations.
 
-- Minimal platform fees (2.5%)
-- No hidden charges or processing fees
-- Transparent fee structure
-- Lower costs than traditional payment processors
+### Portfolio / Cause Funds
+Thematic pooled funds organized by field of charitable service — for example, Environmental Impact, Poverty Relief, or Education. Donors contribute to a cause area, and the accumulated funds are distributed equally among verified charities within that category. The Foundation curates the initial roster of eligible organizations, with final composition determined through community governance.
 
-### ⚡ Instant Transactions
+### Blockchain-Verified Volunteer Credentials
+Give Protocol uses non-transferable Soul-Bound Tokens (SBTs) to provide verifiable, portable recognition for volunteer contributions. Verified charitable organizations can issue credential tokens to volunteers attesting to their hours, skills, and impact. These credentials are recorded on the blockchain, cannot be traded or faked, and can be exported as W3C Verifiable Credentials for use anywhere — on a resume, a LinkedIn profile, or another platform.
 
-- Real-time donation processing
-- Immediate confirmation for donors
-- No waiting for bank transfers
-- 24/7 availability
+## What Makes It Different
 
-### 🛡️ Secure & Verified
+**Minimal, transparent fees.** A 0.5% platform fee on direct donations is a fraction of what traditional platforms charge (3–5% or more). Portfolio funds carry a 1% fee. CEF fees apply only to generated yield, never to principal. All fees are disclosed upfront before the donor confirms.
 
-- Blockchain-secured transactions
-- Verified organization profiles
-- Multi-signature wallet protection
-- Regular security audits
+**Sustainable funding, not just one-time gifts.** CEFs transform donations into ongoing revenue streams for charities, reducing their dependence on constant fundraising.
 
-### 📱 User-Friendly
+**True transparency.** Every crypto donation is recorded on a public blockchain. Donors can independently verify that their funds reached the intended recipient by checking the transaction on a block explorer.
 
-- Intuitive interface for all users
-- Mobile-responsive design
-- Simple wallet connection
-- Easy donation tracking
+**Dual donation rails.** Donors can give by card or crypto. The platform doesn't force anyone into cryptocurrency — fiat donations work without a wallet, and the two systems are completely separate.
 
-## How It Works
+**Multi-chain support.** Give Protocol operates on Moonbeam, Base, and Optimism, with Solana and Arbitrum planned. Donors can give using whichever blockchain network they prefer.
 
-### For Donors
+**Volunteer-driven and nonprofit.** Give Protocol Foundation is a 501(c)(3) nonprofit run by volunteers. There are no investors seeking returns and no token to speculate on. The protocol uses established ecosystem tokens (ETH, GLMR, USDC, DAI, and others) rather than issuing its own.
 
-1. **Create Account**: Sign up with email and connect your crypto wallet
-2. **Browse Causes**: Explore verified organizations and campaigns
-3. **Make Donations**: Send cryptocurrency directly to organizations
-4. **Track Impact**: Monitor how your donations are used
-5. **Get Receipts**: Receive tax-deductible receipts automatically
+## The Technology
 
-### For Organizations
+Give Protocol is built on EVM-compatible blockchains using Solidity smart contracts and the OpenZeppelin security library. The frontend is a React-based progressive web application. The backend uses Supabase (Postgres database, authentication, file storage, and serverless functions). Fiat payments are handled by Helcim and PayPal, which are architecturally isolated from the crypto infrastructure.
 
-1. **Apply & Verify**: Complete our verification process
-2. **Create Profile**: Share your mission and impact stories
-3. **Launch Campaigns**: Set fundraising goals and timelines
-4. **Receive Donations**: Accept crypto donations instantly
-5. **Engage Donors**: Provide updates and impact reports
+Charity verification integrates with official national charity registers — starting with the US IRS Exempt Organizations dataset and expanding to include registers from the UK, Canada, Australia, and other jurisdictions. This allows the platform to auto-populate charity profiles from trusted public data and verify organizational legitimacy.
 
-### For Volunteers
+## Current Status
 
-1. **Create Profile**: Showcase your skills and interests
-2. **Find Opportunities**: Browse local and remote volunteer positions
-3. **Track Hours**: Log volunteer time digitally
-4. **Build History**: Create verified service record
-5. **Make Impact**: Connect with causes you care about
+Give Protocol is in its **Genesis Phase** — the platform is live on testnet and approaching mainnet launch pending security audits. Core features including multi-chain donation support, charity profiles, fiat integration, and the IRS dataset import are built and functional. CEF vault deployment, the SBT credential system, and Portfolio/Cause Funds are in active development.
 
-## Technology Stack
-
-### Blockchain Infrastructure
-
-- **Primary Network**: Ethereum mainnet for security
-- **Layer 2 Solutions**: Polygon, Arbitrum for lower fees
-- **Cross-Chain Support**: Binance Smart Chain, Solana
-- **Smart Contracts**: Audited and open-source
-
-### Platform Architecture
-
-- **Frontend**: React.js with TypeScript
-- **Backend**: Node.js with Express
-- **Database**: PostgreSQL with Supabase
-- **Storage**: IPFS for decentralized file storage
-- **APIs**: RESTful and GraphQL endpoints
-
-## Benefits
-
-### For Donors
-
-- **Direct Impact**: Donations go directly to organizations
-- **Tax Benefits**: Automatic tax receipt generation
-- **Portfolio Tracking**: Monitor all donations in one place
-- **Global Reach**: Support causes worldwide
-- **Community**: Connect with like-minded donors
-
-### For Organizations
-
-- **Reduced Costs**: Lower transaction fees
-- **Instant Access**: Immediate fund availability
-- **Global Donors**: Accept donations worldwide
-- **Transparency**: Build trust with donors
-- **Tools**: Modern fundraising features
-
-### For the Charitable Sector
-
-- **Increased Trust**: Blockchain verification
-- **Better Efficiency**: Reduced administrative costs
-- **Innovation**: Modern giving methods
-- **Accessibility**: Reach new donor demographics
-- **Impact Measurement**: Data-driven insights
-
-## Use Cases
-
-### Disaster Relief
-
-- Rapid response fundraising
-- Direct aid distribution
-- Transparent fund allocation
-- Real-time impact tracking
-
-### Education Initiatives
-
-- Scholarship funding
-- School infrastructure projects
-- Educational resource distribution
-- Student sponsorship programs
-
-### Healthcare Campaigns
-
-- Medical treatment funding
-- Hospital equipment purchases
-- Research project support
-- Community health programs
-
-### Environmental Causes
-
-- Conservation projects
-- Climate action initiatives
-- Wildlife protection
-- Sustainable development
-
-### Community Development
-
-- Local infrastructure projects
-- Small business support
-- Skills training programs
-- Cultural preservation
-
-## Why Blockchain?
-
-### Transparency & Trust
-
-- Immutable donation records
-- Public ledger verification
-- No hidden intermediaries
-- Complete audit trails
-
-### Efficiency & Speed
-
-- Instant global transactions
-- No banking delays
-- 24/7 operation
-- Automated processes
-
-### Security & Control
-
-- Cryptographic protection
-- User-controlled wallets
-- No central point of failure
-- Fraud prevention
-
-### Innovation & Future
-
-- Programmable donations
-- Smart contract automation
-- NFT certificates
-- DeFi integration potential
-
-## Join the Revolution
-
-Give Protocol is more than a platform – it's a movement to transform charitable giving. Whether you're a donor looking to make a difference, an organization seeking support, or a volunteer wanting to contribute your time, Give Protocol provides the tools and transparency to maximize your impact.
-
-### Get Started Today
-
-- [Create an Account]({{ '/docs/getting-started/creating-account/' | relative_url }})
-- [Browse Organizations]({{ '/docs/organizations/' | relative_url }})
-- [Learn About Security]({{ '/docs/technical/security-model/' | relative_url }})
-- [Troubleshooting]({{ '/docs/troubleshooting/' | relative_url }})
-
-Together, we're building a more transparent, efficient, and impactful future for charitable giving.
+The platform is open source and developed by a global volunteer team. You can follow development progress on GitHub or join the community on Discord.
